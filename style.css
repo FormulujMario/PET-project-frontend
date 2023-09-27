@@ -1,3 +1,9 @@
 body {
-    
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu {
+    font-size: 14px;
+}
+.logo {
+    height: 60px;
 }
