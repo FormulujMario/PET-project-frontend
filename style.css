@@ -1,9 +1,27 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .menu {
-    font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 25px;
 }
 .logo {
-    height: 60px;
+  height: 60px;
+}
+.menu-list ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+.language ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+.language ul li a {
+  text-decoration: none;
+  color: inherit;
 }
