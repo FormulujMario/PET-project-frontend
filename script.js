@@ -25,3 +25,30 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+const bestsellersSlider = [
+    {
+        name:'Super nova',
+        price: '230 RSD',
+        description: 'IPA / abv 5.0% / ibu 26 / 0.33l',
+        img:'../pics/SuperNova.png'
+    },
+    {
+        name:'Lutka',
+        price: '230 RSD',
+        description: 'IPA / abv 4.7% / ibu 15 / 0.33l',
+        img:'../pics/Lutka.png'
+    },
+    {
+        name:'Plavo',
+        price: '230 RSD',
+        description: 'IPA / abv 6.2% / ibu 26 / 0.33l',
+        img:'../pics/Plavo.png'
+    },
+    {
+        name:'Porter',
+        price: '235 RSD',
+        description: 'IPA / abv 6.0% / ibu 30 / 0.33l',
+        img:'../pics/Porter.png'
+    }
+];
