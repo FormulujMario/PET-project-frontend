@@ -14,7 +14,7 @@ if (title.length > 12) {
   });
 }
 
-const swiper = new Swiper(".swiper", {
+const swiperMainPage = new Swiper(".swiper-main-page", {
   direction: "horizontal",
   loop: true,
   pagination: {
@@ -27,28 +27,61 @@ const swiper = new Swiper(".swiper", {
 });
 
 const bestsellersSlider = [
-    {
-        name:'Super nova',
-        price: '230 RSD',
-        description: 'IPA / abv 5.0% / ibu 26 / 0.33l',
-        img:'../pics/SuperNova.png'
-    },
-    {
-        name:'Lutka',
-        price: '230 RSD',
-        description: 'IPA / abv 4.7% / ibu 15 / 0.33l',
-        img:'../pics/Lutka.png'
-    },
-    {
-        name:'Plavo',
-        price: '230 RSD',
-        description: 'IPA / abv 6.2% / ibu 26 / 0.33l',
-        img:'../pics/Plavo.png'
-    },
-    {
-        name:'Porter',
-        price: '235 RSD',
-        description: 'IPA / abv 6.0% / ibu 30 / 0.33l',
-        img:'../pics/Porter.png'
-    }
+  {
+    name: "Super nova",
+    price: "230 RSD",
+    description: "IPA / abv 5.0% / ibu 26 / 0.33l",
+    img: "../Kbinet-Brewery/pics/SuperNova.png",
+  },
+  {
+    name: "Lutka",
+    price: "230 RSD",
+    description: "IPA / abv 4.7% / ibu 15 / 0.33l",
+    img: "../Kbinet-Brewery/pics/Lutka.png",
+  },
+  {
+    name: "Plavo",
+    price: "230 RSD",
+    description: "IPA / abv 6.2% / ibu 26 / 0.33l",
+    img: "../Kbinet-Brewery/pics/Plavo.png",
+  },
+  {
+    name: "Porter",
+    price: "235 RSD",
+    description: "IPA / abv 6.0% / ibu 30 / 0.33l",
+    img: "../Kbinet-Brewery/pics/Porter.png",
+  },
+  {
+    name: "Plavo",
+    price: "230 RSD",
+    description: "IPA / abv 6.2% / ibu 26 / 0.33l",
+    img: "../Kbinet-Brewery/pics/Plavo.png",
+  },
+  {
+    name: "Porter",
+    price: "235 RSD",
+    description: "IPA / abv 6.0% / ibu 30 / 0.33l",
+    img: "../Kbinet-Brewery/pics/Porter.png",
+  },
 ];
+const bestsellersSwiperWrapper = document.querySelector(
+  ".bestsellers-products .swiper-wrapper"
+);
+bestsellersSlider.forEach((element) => {
+  bestsellersSwiperWrapper.insertAdjacentHTML(
+    "beforeend",
+    `<div class="swiper-slide">
+        <div class="bestseller-item"><div class="bestseller-item-img"><img src="${element.img}" alt=""></div><div class="bestseller-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div><p>${element.description}</p></div>
+        </div>`
+  );
+});
+const swiperBestsellers = new Swiper(".swiper-bestsellers", {
+  direction: "horizontal",
+  loop: false,
+  slidesPerView: 4,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

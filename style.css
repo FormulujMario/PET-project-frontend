@@ -1,16 +1,42 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
+}
+h1 {
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 11.9vw;
+  margin: auto;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+h2 {
+  font-weight: 300;
+  font-size: 4vw;
+  margin-bottom: 30px;
+}
+h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5vw;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 header {
   padding: 25px;
 }
 main {
-  padding: 25px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  padding-right: 25px;
 }
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 14px;
 }
 .logo {
@@ -19,7 +45,10 @@ main {
 .menu-list ul {
   list-style: none;
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 64px;
+  width: 100%;
+  padding-left: 0;
 }
 .language ul {
   list-style: none;
@@ -30,20 +59,11 @@ main {
   text-decoration: none;
   color: inherit;
 }
-h1 {
-  display: flex;
-  justify-content: space-between;
-  white-space: nowrap;
-  font-family: "Inter", sans-serif;
-  font-size: 11.9vw;
-  margin: auto;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-.swiper {
-  border-radius: 15px;
+.slider {
   margin-top: 30px;
-  margin-bottom: 15px;
+}
+.swiper-main-page {
+  border-radius: 15px;
 }
 .swiper-button-next {
   color: #000;
@@ -54,30 +74,44 @@ h1 {
 .swiper-slide img {
   width: 100%;
 }
-.bestsellers{
-    display: flex;
+.bestsellers-title {
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
-h2{
-    font-family: "Inter", sans-serif;
-    font-size: 4vw;
-}
-.normal-white-button{
-    display: flex;
-  gap:5px;
+.normal-white-button {
+  display: flex;
   align-items: center;
-    background-color: #fff;
-    border-radius: 30px;
-    border: 1px solid #000;
-    padding: 7px 20px 7px 20px;
-    font-size: 1vw;
-    cursor: pointer;
+  gap: 5px;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid #000;
+  padding: 7px 20px 7px 20px;
+  font-size: 1vw;
+  cursor: pointer;
 }
-.normal-white-button:hover{
-    background-color: #000;
-    color:#fff;
+.normal-white-button:hover {
+  background-color: #000;
+  color: #fff;
 }
-.normal-white-button:hover svg path{
-    fill:#fff;
+.normal-white-button:hover svg path {
+  fill: #fff;
+}
+.bestseller-item {
+  display: flex;
+  flex-direction: column;
+}
+.bestseller-item-img {
+  border-radius: 8px;
+  border: 1px solid #000;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.bestseller-item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bestseller-item p {
+  font-weight: 300;
 }
