@@ -136,3 +136,23 @@ main {
   font-size: 1.5vw;
   width: 45%;
 }
+.kabinet-products-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.kabinet-products-title .tab-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.disabled {
+  border: 1px solid #999999;
+  color: #999999;
+}
+
+.active {
+  background-color: #000;
+  color: #fff;
+}
