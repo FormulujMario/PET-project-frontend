@@ -15,6 +15,7 @@ h2 {
   font-weight: 300;
   font-size: 4vw;
   margin-bottom: 30px;
+  line-height: 4vw;
 }
 h4 {
   text-transform: uppercase;
@@ -114,4 +115,24 @@ main {
 }
 .bestseller-item p {
   font-weight: 300;
+}
+.link-to-about-us {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.link-to-about-us img {
+  width: 100%;
+}
+.align-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.link-to-about-us p {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5vw;
+  width: 45%;
 }
