@@ -110,12 +110,12 @@ const kabinetProductsBeersSlider = [
     img: "../Kbinet-Brewery/pics/shop-now.png",
   },
 ];
-const kabinetProductsSwiperWrapper = document.querySelector(
+const kabinetProductsBeersSwiperWrapper = document.querySelector(
   ".swiper-kabinet-products-beers .swiper-wrapper"
 );
 kabinetProductsBeersSlider.forEach((element) => {
   if (element.name && element.price && element.description && element.img) {
-    kabinetProductsSwiperWrapper.insertAdjacentHTML(
+    kabinetProductsBeersSwiperWrapper.insertAdjacentHTML(
       "beforeend",
       `<div class="swiper-slide">
           <div class="swiper-slide-item"><div class="swiper-slide-item-img"><img src="${element.img}" alt=""></div><div class="swiper-slide-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div><p>${element.description}</p></div>
@@ -123,7 +123,7 @@ kabinetProductsBeersSlider.forEach((element) => {
     );
   }
   if (element.name && !element.price && !element.description && element.img) {
-    kabinetProductsSwiperWrapper.insertAdjacentHTML(
+    kabinetProductsBeersSwiperWrapper.insertAdjacentHTML(
       "beforeend",
       `<div class="swiper-slide">
         <div class="swiper-slide-item-shop-now"><div class="swiper-slide-item-shop-now-img"><img src="${element.img}" alt=""></div><span class="shop-now">${element.name}</span></div>
@@ -133,6 +133,63 @@ kabinetProductsBeersSlider.forEach((element) => {
 });
 
 const kabinetProductsBeers = new Swiper(".swiper-kabinet-products-beers", {
+  direction: "horizontal",
+  loop: false,
+  slidesPerView: 4,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const kabinetProductsMerchSlider = [
+  {
+    name: "Kabinet",
+    price: "1200 RSD",
+    description: "T-shirt",
+    img: "../Kbinet-Brewery/pics/kabinet-t-short.png",
+  },
+  {
+    name: "BrrKaaa",
+    price: "350 RSD",
+    description: "Tote bag",
+    img: "../Kbinet-Brewery/pics/BrrKaaa-bag.png",
+  },
+  {
+    name: "Lutka",
+    price: "350 RSD",
+    description: "Tote bag",
+    img: "../Kbinet-Brewery/pics/Lutka-bag.png",
+  },
+  {
+    name: "Shop now",
+    img: "../Kbinet-Brewery/pics/shop-now.png",
+  },
+];
+const kabinetProductsMerchSwiperWrapper = document.querySelector(
+  ".swiper-kabinet-products-merch .swiper-wrapper"
+);
+kabinetProductsMerchSlider.forEach((element) => {
+  if (element.name && element.price && element.description && element.img) {
+    kabinetProductsMerchSwiperWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<div class="swiper-slide">
+            <div class="swiper-slide-item"><div class="swiper-slide-item-img"><img src="${element.img}" alt=""></div><div class="swiper-slide-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div><p>${element.description}</p></div>
+            </div>`
+    );
+  }
+  if (element.name && !element.price && !element.description && element.img) {
+    kabinetProductsMerchSwiperWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<div class="swiper-slide">
+          <div class="swiper-slide-item-shop-now"><div class="swiper-slide-item-shop-now-img"><img src="${element.img}" alt=""></div><span class="shop-now">${element.name}</span></div>
+          </div>`
+    );
+  }
+});
+
+const kabinetProductsMerch = new Swiper(".swiper-kabinet-products-merch", {
   direction: "horizontal",
   loop: false,
   slidesPerView: 4,
