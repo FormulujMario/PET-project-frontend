@@ -255,3 +255,26 @@ main {
   display: flex;
   justify-content: space-between;
 }
+.swiper-latest-news .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5%;
+}
+.swiper-latest-news .side-slide {
+  width: calc(94% / 4) !important;
+}
+.swiper-latest-news .central-slide {
+  width: 49% !important;
+}
+.swiper-latest-news .swiper-slide-item-img {
+  border-radius: 8px;
+  border: none;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.swiper-latest-news p {
+  margin-bottom: 5px;
+}
+.swiper-latest-news h4 {
+  margin-top: 5px;
+}

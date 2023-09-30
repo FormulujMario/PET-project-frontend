@@ -337,3 +337,58 @@ pivoladaTabButton.onclick = () => {
   merchSwiper.classList.remove("visible", "hidden");
   merchSwiper.classList.add("hidden");
 };
+
+const newsSlider = [
+  {
+    date: "03 mar 2022",
+    title: "Spring is almost here, it is the time for discounts!",
+    imgSmall: "../Kabinet-Brewery/pics/news/2022-03-03-Spring.png",
+    imgBig: "",
+  },
+  {
+    date: "02 FeB 2022",
+    title: "Seventh Birthday Kabinet Brewery!",
+    imgSmall: "",
+    imgBig: "../Kabinet-Brewery/pics/news/2022-02-02-Birthday.png",
+  },
+  {
+    date: "02 FeB 2022",
+    title: "III birthday of our bread with wild yeast!",
+    imgSmall: "../Kabinet-Brewery/pics/news/2022-05-05-Birthday.png",
+    imgBig: "",
+  },
+];
+const newsSwiperWrapper = document.querySelector(
+  ".swiper-latest-news .swiper-wrapper"
+);
+newsSlider.forEach((element, i) => {
+  if (i === 0 || i === 2) {
+    newsSwiperWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<div class="swiper-slide side-slide">
+        <div class="swiper-slide-item">
+        <div class="swiper-slide-item-img"><img src="${element.imgSmall}" alt=""></div>
+        <div class="swiper-slide-item-title"><p>${element.date}</p></div>
+        <h4>${element.title}</h4>
+        </div>
+        </div>`
+    );
+  }
+  if (i === 1) {
+    newsSwiperWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<div class="swiper-slide central-slide">
+        <div class="swiper-slide-item">
+        <div class="swiper-slide-item-img"><img src="${element.imgBig}" alt=""></div>
+        <div class="swiper-slide-item-title"><p>${element.date}</p></div>
+        <h4>${element.title}</h4>
+        </div>
+        </div>`
+    );
+  }
+});
+const swiperNews = new Swiper(".swiper-latest-news", {
+  direction: "horizontal",
+  loop: false,
+  slidesPerView: 4,
+});
