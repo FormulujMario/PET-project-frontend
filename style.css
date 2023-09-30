@@ -278,3 +278,27 @@ main {
 .swiper-latest-news h4 {
   margin-top: 5px;
 }
+.back-to-top {
+  display: flex;
+  justify-content: flex-end;
+}
+.back-to-top button {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: transparent;
+  border: none;
+  color: #00000080;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 60px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
+.back-to-top button:hover {
+  color: #000000;
+}
+.back-to-top button:hover svg path {
+  fill-opacity: 1;
+}
