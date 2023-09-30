@@ -390,5 +390,5 @@ newsSlider.forEach((element, i) => {
 const swiperNews = new Swiper(".swiper-latest-news", {
   direction: "horizontal",
   loop: false,
-  slidesPerView: 4,
+  slidesPerView: 3
 });
