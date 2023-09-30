@@ -101,6 +101,7 @@ main {
 .swiper-slide-item {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
 }
 .swiper-slide-item-img {
   border-radius: 8px;
@@ -169,8 +170,8 @@ main {
 }
 .shop-now {
   position: absolute;
-  text-transform: uppercase;
   font-weight: 300;
+  text-transform: uppercase;
 }
 .swiper-slide-item-shop-now {
   cursor: pointer;
