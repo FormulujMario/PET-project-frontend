@@ -71,11 +71,68 @@ bestsellersSlider.forEach((element) => {
   bestsellersSwiperWrapper.insertAdjacentHTML(
     "beforeend",
     `<div class="swiper-slide">
-        <div class="bestseller-item"><div class="bestseller-item-img"><img src="${element.img}" alt=""></div><div class="bestseller-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div><p>${element.description}</p></div>
+        <div class="swiper-slide-item"><div class="swiper-slide-item-img"><img src="${element.img}" alt=""></div><div class="swiper-slide-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div><p>${element.description}</p></div>
         </div>`
   );
 });
 const swiperBestsellers = new Swiper(".swiper-bestsellers", {
+  direction: "horizontal",
+  loop: false,
+  slidesPerView: 4,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const kabinetProductsBeersSlider = [
+  {
+    name: "Disko",
+    price: "255 RSD",
+    description: "IPA / abv 5.6% / ibu 40 / 0.33l",
+    img: "../Kbinet-Brewery/pics/Disko.png",
+  },
+  {
+    name: "Konfuzije",
+    price: "260 RSD",
+    description: "lager / abv 6.3% / ibu 60 / 0.33l",
+    img: "../Kbinet-Brewery/pics/Konfuzije.png",
+  },
+  {
+    name: "Trag",
+    price: "230 RSD",
+    description: "Ale / abv 4.7 %% / ibu 15 / 0.33l",
+    img: "../Kbinet-Brewery/pics/Trag.png",
+  },
+  {
+    name: "Shop now",
+    img: "../Kbinet-Brewery/pics/shop-now.png",
+  },
+];
+const kabinetProductsSwiperWrapper = document.querySelector(
+  ".swiper-kabinet-products-beers .swiper-wrapper"
+);
+kabinetProductsBeersSlider.forEach((element) => {
+  if (element.name && element.price && element.description && element.img) {
+    kabinetProductsSwiperWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<div class="swiper-slide">
+          <div class="swiper-slide-item"><div class="swiper-slide-item-img"><img src="${element.img}" alt=""></div><div class="swiper-slide-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div><p>${element.description}</p></div>
+          </div>`
+    );
+  }
+  if (element.name && !element.price && !element.description && element.img) {
+    kabinetProductsSwiperWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<div class="swiper-slide">
+        <div class="swiper-slide-item-shop-now"><div class="swiper-slide-item-shop-now-img"><img src="${element.img}" alt=""></div><span class="shop-now">${element.name}</span></div>
+        </div>`
+    );
+  }
+});
+
+const kabinetProductsBeers = new Swiper(".swiper-kabinet-products-beers", {
   direction: "horizontal",
   loop: false,
   slidesPerView: 4,

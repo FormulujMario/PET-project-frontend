@@ -24,6 +24,24 @@ h4 {
   margin-top: 15px;
   margin-bottom: 0;
 }
+.normal-white-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid #000;
+  padding: 7px 20px 7px 20px;
+  font-size: 1vw;
+  cursor: pointer;
+}
+.normal-white-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.normal-white-button:hover svg path {
+  fill: #fff;
+}
 header {
   padding: 25px;
 }
@@ -80,40 +98,22 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.normal-white-button {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background-color: #fff;
-  border-radius: 30px;
-  border: 1px solid #000;
-  padding: 7px 20px 7px 20px;
-  font-size: 1vw;
-  cursor: pointer;
-}
-.normal-white-button:hover {
-  background-color: #000;
-  color: #fff;
-}
-.normal-white-button:hover svg path {
-  fill: #fff;
-}
-.bestseller-item {
+.swiper-slide-item {
   display: flex;
   flex-direction: column;
 }
-.bestseller-item-img {
+.swiper-slide-item-img {
   border-radius: 8px;
   border: 1px solid #000;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.bestseller-item-title {
+.swiper-slide-item-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.bestseller-item p {
+.swiper-slide-item p {
   font-weight: 300;
 }
 .link-to-about-us {
@@ -146,13 +146,45 @@ main {
   display: flex;
   gap: 12px;
 }
-
 .disabled {
   border: 1px solid #999999;
   color: #999999;
 }
-
 .active {
   background-color: #000;
   color: #fff;
+}
+.swiper-slide-item-shop-now {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide-item-shop-now-img {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #000;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.shop-now {
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.swiper-slide-item-shop-now {
+  cursor: pointer;
+}
+.swiper-slide-item-shop-now:hover:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0e0e0e;
+  border-radius: 8px;
+  z-index: 98;
+}
+.swiper-slide-item-shop-now:hover span {
+  color: #fff;
+  z-index: 99;
 }
