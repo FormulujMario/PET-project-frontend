@@ -24,22 +24,51 @@ h4 {
   margin-top: 15px;
   margin-bottom: 0;
 }
-.normal-white-button {
+.normal-button {
   display: flex;
   align-items: center;
   gap: 5px;
-  background-color: #fff;
   border-radius: 30px;
-  border: 1px solid #000;
   padding: 7px 20px 7px 20px;
   font-size: 1vw;
   cursor: pointer;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
 }
-.normal-white-button:hover {
+.white-button {
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.white-button:hover {
   background-color: #000;
   color: #fff;
 }
-.normal-white-button:hover svg path {
+.white-button:hover svg path {
+  fill: #fff;
+}
+.transparent-button {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.transparent-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+.transparent-button:hover svg path {
+  fill: #000000;
+}
+.white-button-without-border {
+  background-color: #fff;
+  border: 1px solid #ffffff;
+}
+.white-button-without-border:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000000;
+}
+.white-button-without-border:hover svg path {
   fill: #fff;
 }
 .hidden {
@@ -194,4 +223,35 @@ main {
 .swiper-slide-item-shop-now:hover span {
   color: #fff;
   z-index: 99;
+}
+.trip-to-kabinet-lounge {
+  margin-top: 70px;
+  display: flex;
+}
+.trip-to-kabinet-lounge img {
+  width: 100%;
+}
+.kabinet-lounge-title {
+  position: absolute;
+  width: 65%;
+  margin-top: 10px;
+  margin-left: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  color: #fff;
+}
+.kabinet-lounge-title-h2 {
+  text-transform: uppercase;
+  flex-basis: 55%;
+}
+.kabinet-lounge-title-desc {
+  flex-basis: 35%;
+  font-weight: 300;
+  font-size: 1.2vw;
+}
+.kabinet-lounge-title-buttons {
+  display: flex;
+  justify-content: space-between;
 }
