@@ -42,6 +42,12 @@ h4 {
 .normal-white-button:hover svg path {
   fill: #fff;
 }
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
 header {
   padding: 25px;
 }

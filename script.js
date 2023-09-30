@@ -200,54 +200,55 @@ const kabinetProductsMerch = new Swiper(".swiper-kabinet-products-merch", {
   },
 });
 
-
 const kabinetProductsPivoladaSlider = [
-    {
-      name: "BrrKaaa",
-      price: "350 RSD",
-      description: "Citrus / 0.25l",
-      img: "../Kbinet-Brewery/pics/BrrKaaa-pivolada.png",
-    },
-    {
-      name: "Plavo",
-      price: "350 RSD",
-      description: "Floral / 0.25l",
-      img: "../Kbinet-Brewery/pics/Plavo-pivolada.png",
-    },
-    {
-      name: "Porter",
-      price: "350 RSD",
-      description: "Chocolate / 0.25l",
-      img: "../Kbinet-Brewery/pics/Porter-pivolada.png",
-    },
-    {
-      name: "Shop now",
-      img: "../Kbinet-Brewery/pics/shop-now.png",
-    },
-  ];
-  const kabinetProductsPivoladaSwiperWrapper = document.querySelector(
-    ".swiper-kabinet-products-pivolada .swiper-wrapper"
-  );
-  kabinetProductsPivoladaSlider.forEach((element) => {
-    if (element.name && element.price && element.description && element.img) {
-      kabinetProductsPivoladaSwiperWrapper.insertAdjacentHTML(
-        "beforeend",
-        `<div class="swiper-slide">
+  {
+    name: "BrrKaaa",
+    price: "350 RSD",
+    description: "Citrus / 0.25l",
+    img: "../Kbinet-Brewery/pics/BrrKaaa-pivolada.png",
+  },
+  {
+    name: "Plavo",
+    price: "350 RSD",
+    description: "Floral / 0.25l",
+    img: "../Kbinet-Brewery/pics/Plavo-pivolada.png",
+  },
+  {
+    name: "Porter",
+    price: "350 RSD",
+    description: "Chocolate / 0.25l",
+    img: "../Kbinet-Brewery/pics/Porter-pivolada.png",
+  },
+  {
+    name: "Shop now",
+    img: "../Kbinet-Brewery/pics/shop-now.png",
+  },
+];
+const kabinetProductsPivoladaSwiperWrapper = document.querySelector(
+  ".swiper-kabinet-products-pivolada .swiper-wrapper"
+);
+kabinetProductsPivoladaSlider.forEach((element) => {
+  if (element.name && element.price && element.description && element.img) {
+    kabinetProductsPivoladaSwiperWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<div class="swiper-slide">
               <div class="swiper-slide-item"><div class="swiper-slide-item-img"><img src="${element.img}" alt=""></div><div class="swiper-slide-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div><p>${element.description}</p></div>
               </div>`
-      );
-    }
-    if (element.name && !element.price && !element.description && element.img) {
-      kabinetProductsPivoladaSwiperWrapper.insertAdjacentHTML(
-        "beforeend",
-        `<div class="swiper-slide">
+    );
+  }
+  if (element.name && !element.price && !element.description && element.img) {
+    kabinetProductsPivoladaSwiperWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<div class="swiper-slide">
             <div class="swiper-slide-item-shop-now"><div class="swiper-slide-item-shop-now-img"><img src="${element.img}" alt=""></div><span class="shop-now">${element.name}</span></div>
             </div>`
-      );
-    }
-  });
-  
-  const kabinetProductsPivolada = new Swiper(".swiper-kabinet-products-pivolada", {
+    );
+  }
+});
+
+const kabinetProductsPivolada = new Swiper(
+  ".swiper-kabinet-products-pivolada",
+  {
     direction: "horizontal",
     loop: false,
     slidesPerView: 4,
@@ -256,4 +257,61 @@ const kabinetProductsPivoladaSlider = [
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
+  }
+);
+
+const beersTabButton = document.querySelector(".beers-tab");
+const merchTabButton = document.querySelector(".merch-tab");
+const pivoladaTabButton = document.querySelector(".pivolada-tab");
+
+const beersSwiper = document.querySelector(".swiper-kabinet-products-beers");
+const merchSwiper = document.querySelector(".swiper-kabinet-products-merch");
+const pivoladaSwiper = document.querySelector(
+  ".swiper-kabinet-products-pivolada"
+);
+
+beersTabButton.onclick = () => {
+  beersTabButton.classList.remove("active", "disabled");
+  beersTabButton.classList.add("active");
+  merchTabButton.classList.remove("active", "disabled");
+  merchTabButton.classList.add("disabled");
+  pivoladaTabButton.classList.remove("active", "disabled");
+  pivoladaTabButton.classList.add("disabled");
+
+  beersSwiper.classList.remove("visible", "hidden");
+  beersSwiper.classList.add("visible");
+  merchSwiper.classList.remove("visible", "hidden");
+  merchSwiper.classList.add("hidden");
+  pivoladaSwiper.classList.remove("visible", "hidden");
+  pivoladaSwiper.classList.add("hidden");
+};
+merchTabButton.onclick = () => {
+  merchTabButton.classList.remove("active", "disabled");
+  merchTabButton.classList.add("active");
+  beersTabButton.classList.remove("active", "disabled");
+  beersTabButton.classList.add("disabled");
+  pivoladaTabButton.classList.remove("active", "disabled");
+  pivoladaTabButton.classList.add("disabled");
+
+  merchSwiper.classList.remove("visible", "hidden");
+  merchSwiper.classList.add("visible");
+  beersSwiper.classList.remove("visible", "hidden");
+  beersSwiper.classList.add("hidden");
+  pivoladaSwiper.classList.remove("visible", "hidden");
+  pivoladaSwiper.classList.add("hidden");
+};
+pivoladaTabButton.onclick = () => {
+  pivoladaTabButton.classList.remove("active", "disabled");
+  pivoladaTabButton.classList.add("active");
+  beersTabButton.classList.remove("active", "disabled");
+  beersTabButton.classList.add("disabled");
+  merchTabButton.classList.remove("active", "disabled");
+  merchTabButton.classList.add("disabled");
+
+  pivoladaSwiper.classList.remove("visible", "hidden");
+  pivoladaSwiper.classList.add("visible");
+  beersSwiper.classList.remove("visible", "hidden");
+  beersSwiper.classList.add("hidden");
+  merchSwiper.classList.remove("visible", "hidden");
+  merchSwiper.classList.add("hidden");
+};
