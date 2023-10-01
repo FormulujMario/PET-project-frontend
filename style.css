@@ -297,7 +297,7 @@ main {
   fill-opacity: 1;
 }
 .footer-main {
-  background-color: #000;
+  background-color: #111111;
   padding-top: 50px;
   padding-left: 25px;
   padding-right: 25px;
@@ -358,6 +358,7 @@ main {
 .list-menu-footer ul {
   list-style: none;
   margin-top: 5px;
+  margin-bottom: 0;
   padding-left: 0;
 }
 .list-menu-footer ul li {
@@ -376,4 +377,12 @@ main {
 .soc-net-icons svg:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+.developed-by {
+  display: flex;
+  justify-content: right;
+  text-transform: uppercase;
+  color: #ffffff80;
+  font-size: 0.8vw;
+  padding-bottom: 25px;
 }
