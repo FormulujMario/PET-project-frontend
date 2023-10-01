@@ -337,6 +337,43 @@ main {
   transition: transform 1s;
 }
 .subscribe-button:hover svg {
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+.main-links-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #fff;
+  margin-top: 30px;
+}
+.list-menu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8vw;
+  text-transform: uppercase;
+}
+.list-menu-footer ul {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 0;
+}
+.list-menu-footer ul li {
+  color: #ffffffb2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.soc-net-icons {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.soc-net-icons svg {
+  transition: transform 0.5s;
+}
+.soc-net-icons svg:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }

@@ -400,3 +400,47 @@ document.querySelector(".back-to-top button").onclick = () => {
     behavior: "smooth",
   });
 };
+
+const footerMenuArr = [
+  {
+    name: "SHOP",
+    list: [
+      "ALL",
+      "BEER PACKS",
+      "BEER",
+      "PIVOLADA",
+      "MERCH",
+      "TERMS OF SERVICE",
+      "REFUND POLICY",
+    ],
+  },
+  {
+    name: "ABOUT US",
+    list: ["ABOUT", "ART", "NEWS"],
+  },
+  {
+    name: "HELP",
+    list: [
+      "CONTACT",
+      "SHIPPING",
+      "RETURNED",
+      "TERMS & CONDITIONS",
+      "PRIVACY POLICY",
+    ],
+  },
+];
+const footerMenuWrapper = document.querySelector(".list-menu-footer");
+footerMenuArr.forEach((element, i) => {
+  let ul = document.createElement("ul");
+  footerMenuWrapper.insertAdjacentHTML(
+    "beforeend",
+    `<div class="column-${i + 1}">
+    <span>${element.name}</span>
+      </div>`
+  );
+  element.list.forEach((subelement) => {
+    ul.insertAdjacentHTML("beforeend", `<li>${subelement}</li>`);
+  });
+  let divAppend = document.querySelector(`.column-${i + 1}`);
+  divAppend.appendChild(ul);
+});
