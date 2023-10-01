@@ -302,3 +302,47 @@ main {
 .back-to-top button:hover svg path {
   fill-opacity: 1;
 }
+.footer-main {
+  background-color: #000;
+  padding-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+.subscribe-input {
+  border: none;
+  background: transparent;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: 2vw;
+}
+.subscribe-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: 2vw;
+  font-weight: 300;
+  padding-right: 0;
+}
+.subscribe-button svg {
+  transition: transform 1s;
+}
+.subscribe-button:hover svg {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
