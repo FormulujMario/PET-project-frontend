@@ -1,9 +1,10 @@
+// ======================= Menu header =======================
 const menuList = ["SHOP", "ABOUT", "ART", "NEWS", "CONTACT"];
 const ulMenu = document.querySelector(".menu-list ul");
 menuList.forEach((item) => {
   ulMenu.insertAdjacentHTML("beforeend", `<li>${item}</li>`);
 });
-
+// ======================= Page title =======================
 let title = document.querySelector("main h1").innerHTML;
 if (title.length > 12) {
   document.querySelector("main h1").innerHTML = "";
@@ -13,7 +14,7 @@ if (title.length > 12) {
       .insertAdjacentHTML("beforeend", `<span>${word}</span>`);
   });
 }
-
+// ======================= Main page top slider =======================
 const swiperMainPage = new Swiper(".swiper-main-page", {
   direction: "horizontal",
   loop: true,
@@ -25,7 +26,7 @@ const swiperMainPage = new Swiper(".swiper-main-page", {
     prevEl: ".swiper-button-prev",
   },
 });
-
+// ======================= Bestsellers slider =======================
 const bestsellersSlider = [
   {
     name: "Super nova",
@@ -89,7 +90,7 @@ const swiperBestsellers = new Swiper(".swiper-bestsellers", {
     prevEl: ".swiper-button-prev",
   },
 });
-
+// ======================= Kabinet products Beers slider =======================
 const kabinetProductsBeersSlider = [
   {
     name: "Disko",
@@ -152,7 +153,7 @@ const kabinetProductsBeers = new Swiper(".swiper-kabinet-products-beers", {
     prevEl: ".swiper-button-prev",
   },
 });
-
+// ======================= Kabinet products Merch slider =======================
 const kabinetProductsMerchSlider = [
   {
     name: "Kabinet",
@@ -215,7 +216,7 @@ const kabinetProductsMerch = new Swiper(".swiper-kabinet-products-merch", {
     prevEl: ".swiper-button-prev",
   },
 });
-
+// ======================= Kabinet products Pivolada slider =======================
 const kabinetProductsPivoladaSlider = [
   {
     name: "BrrKaaa",
@@ -281,7 +282,7 @@ const kabinetProductsPivolada = new Swiper(
     },
   }
 );
-
+// ======================= Kabinet products Tab buttons =======================
 const beersTabButton = document.querySelector(".beers-tab");
 const merchTabButton = document.querySelector(".merch-tab");
 const pivoladaTabButton = document.querySelector(".pivolada-tab");
@@ -337,7 +338,7 @@ pivoladaTabButton.onclick = () => {
   merchSwiper.classList.remove("visible", "hidden");
   merchSwiper.classList.add("hidden");
 };
-
+// ======================= News slider =======================
 const newsSlider = [
   {
     date: "03 mar 2022",
@@ -392,7 +393,7 @@ const swiperNews = new Swiper(".swiper-latest-news", {
   loop: false,
   slidesPerView: 3,
 });
-
+// ======================= Back to top button =======================
 document.querySelector(".back-to-top button").onclick = () => {
   window.scrollTo({
     top: 0,
@@ -400,7 +401,7 @@ document.querySelector(".back-to-top button").onclick = () => {
     behavior: "smooth",
   });
 };
-
+// ======================= Footer menu list =======================
 const footerMenuArr = [
   {
     name: "SHOP",
