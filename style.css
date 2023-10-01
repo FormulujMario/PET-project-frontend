@@ -80,6 +80,12 @@ h4 {
 header {
   padding: 25px;
 }
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
 main {
   padding-left: 25px;
   padding-bottom: 25px;
@@ -128,11 +134,6 @@ main {
 .swiper-slide img {
   width: 100%;
 }
-.bestsellers-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .swiper-slide-item {
   display: flex;
   flex-direction: column;
@@ -153,7 +154,6 @@ main {
   font-weight: 300;
 }
 .link-to-about-us {
-  margin-top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -172,13 +172,7 @@ main {
   font-size: 1.5vw;
   width: 45%;
 }
-.kabinet-products-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-}
-.kabinet-products-title .tab-buttons {
+.section-title .tab-buttons {
   display: flex;
   gap: 12px;
 }
