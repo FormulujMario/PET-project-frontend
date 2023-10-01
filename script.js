@@ -392,6 +392,7 @@ const swiperNews = new Swiper(".swiper-latest-news", {
   loop: false,
   slidesPerView: 3
 });
+
 document.querySelector('.back-to-top button').onclick = () => {
   window.scrollTo({
     top: 0,
