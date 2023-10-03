@@ -1,5 +1,4 @@
 import {
-  MENU_LIST,
   BESTSELLERS_LIST,
   KABINET_PRODUCTS_BEERS_LIST,
   KABINET_PRODUCTS_MERCH_LIST,
@@ -7,11 +6,9 @@ import {
   NEWS_LIST,
   FOOTER_MENU_LIST,
 } from "../Kabinet-Brewery/modules/costants.js";
+import { menuListDisplay } from "../Kabinet-Brewery/modules/header/header.js";
 // ======================= Menu header =======================
-const ulMenu = document.querySelector(".menu-list ul");
-MENU_LIST.forEach((item) => {
-  ulMenu.insertAdjacentHTML("beforeend", `<li>${item}</li>`);
-});
+menuListDisplay();
 // ======================= Page title =======================
 let title = document.querySelector("main h1").innerHTML;
 if (title.length > 12) {
