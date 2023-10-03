@@ -1,7 +1,15 @@
+import {
+  MENU_LIST,
+  BESTSELLERS_LIST,
+  KABINET_PRODUCTS_BEERS_LIST,
+  KABINET_PRODUCTS_MERCH_LIST,
+  KABINET_PRODUCTS_PIVOLADA_LIST,
+  NEWS_LIST,
+  FOOTER_MENU_LIST,
+} from "../Kabinet-Brewery/modules/costants.js";
 // ======================= Menu header =======================
-const menuList = ["SHOP", "ABOUT", "ART", "NEWS", "CONTACT"];
 const ulMenu = document.querySelector(".menu-list ul");
-menuList.forEach((item) => {
+MENU_LIST.forEach((item) => {
   ulMenu.insertAdjacentHTML("beforeend", `<li>${item}</li>`);
 });
 // ======================= Page title =======================
@@ -27,48 +35,10 @@ const swiperMainPage = new Swiper(".swiper-main-page", {
   },
 });
 // ======================= Bestsellers slider =======================
-const bestsellersSlider = [
-  {
-    name: "Super nova",
-    price: "230 RSD",
-    description: "IPA / abv 5.0% / ibu 26 / 0.33l",
-    img: "../Kabinet-Brewery/pics/SuperNova.png",
-  },
-  {
-    name: "Lutka",
-    price: "230 RSD",
-    description: "IPA / abv 4.7% / ibu 15 / 0.33l",
-    img: "../Kabinet-Brewery/pics/Lutka.png",
-  },
-  {
-    name: "Plavo",
-    price: "230 RSD",
-    description: "IPA / abv 6.2% / ibu 26 / 0.33l",
-    img: "../Kabinet-Brewery/pics/Plavo.png",
-  },
-  {
-    name: "Porter",
-    price: "235 RSD",
-    description: "IPA / abv 6.0% / ibu 30 / 0.33l",
-    img: "../Kabinet-Brewery/pics/Porter.png",
-  },
-  {
-    name: "Plavo",
-    price: "230 RSD",
-    description: "IPA / abv 6.2% / ibu 26 / 0.33l",
-    img: "../Kabinet-Brewery/pics/Plavo.png",
-  },
-  {
-    name: "Porter",
-    price: "235 RSD",
-    description: "IPA / abv 6.0% / ibu 30 / 0.33l",
-    img: "../Kabinet-Brewery/pics/Porter.png",
-  },
-];
 const bestsellersSwiperWrapper = document.querySelector(
   ".bestsellers-products .swiper-wrapper"
 );
-bestsellersSlider.forEach((element) => {
+BESTSELLERS_LIST.forEach((element) => {
   bestsellersSwiperWrapper.insertAdjacentHTML(
     "beforeend",
     `<div class="swiper-slide">
@@ -91,34 +61,10 @@ const swiperBestsellers = new Swiper(".swiper-bestsellers", {
   },
 });
 // ======================= Kabinet products Beers slider =======================
-const kabinetProductsBeersSlider = [
-  {
-    name: "Disko",
-    price: "255 RSD",
-    description: "IPA / abv 5.6% / ibu 40 / 0.33l",
-    img: "../Kabinet-Brewery/pics/Disko.png",
-  },
-  {
-    name: "Konfuzije",
-    price: "260 RSD",
-    description: "lager / abv 6.3% / ibu 60 / 0.33l",
-    img: "../Kabinet-Brewery/pics/Konfuzije.png",
-  },
-  {
-    name: "Trag",
-    price: "230 RSD",
-    description: "Ale / abv 4.7 %% / ibu 15 / 0.33l",
-    img: "../Kabinet-Brewery/pics/Trag.png",
-  },
-  {
-    name: "Shop now",
-    img: "../Kabinet-Brewery/pics/shop-now.png",
-  },
-];
 const kabinetProductsBeersSwiperWrapper = document.querySelector(
   ".swiper-kabinet-products-beers .swiper-wrapper"
 );
-kabinetProductsBeersSlider.forEach((element) => {
+KABINET_PRODUCTS_BEERS_LIST.forEach((element) => {
   if (element.name && element.price && element.description && element.img) {
     kabinetProductsBeersSwiperWrapper.insertAdjacentHTML(
       "beforeend",
@@ -154,34 +100,10 @@ const kabinetProductsBeers = new Swiper(".swiper-kabinet-products-beers", {
   },
 });
 // ======================= Kabinet products Merch slider =======================
-const kabinetProductsMerchSlider = [
-  {
-    name: "Kabinet",
-    price: "1200 RSD",
-    description: "T-shirt",
-    img: "../Kabinet-Brewery/pics/kabinet-t-short.png",
-  },
-  {
-    name: "BrrKaaa",
-    price: "350 RSD",
-    description: "Tote bag",
-    img: "../Kabinet-Brewery/pics/BrrKaaa-bag.png",
-  },
-  {
-    name: "Lutka",
-    price: "350 RSD",
-    description: "Tote bag",
-    img: "../Kabinet-Brewery/pics/Lutka-bag.png",
-  },
-  {
-    name: "Shop now",
-    img: "../Kabinet-Brewery/pics/shop-now.png",
-  },
-];
 const kabinetProductsMerchSwiperWrapper = document.querySelector(
   ".swiper-kabinet-products-merch .swiper-wrapper"
 );
-kabinetProductsMerchSlider.forEach((element) => {
+KABINET_PRODUCTS_MERCH_LIST.forEach((element) => {
   if (element.name && element.price && element.description && element.img) {
     kabinetProductsMerchSwiperWrapper.insertAdjacentHTML(
       "beforeend",
@@ -217,34 +139,10 @@ const kabinetProductsMerch = new Swiper(".swiper-kabinet-products-merch", {
   },
 });
 // ======================= Kabinet products Pivolada slider =======================
-const kabinetProductsPivoladaSlider = [
-  {
-    name: "BrrKaaa",
-    price: "350 RSD",
-    description: "Citrus / 0.25l",
-    img: "../Kabinet-Brewery/pics/BrrKaaa-pivolada.png",
-  },
-  {
-    name: "Plavo",
-    price: "350 RSD",
-    description: "Floral / 0.25l",
-    img: "../Kabinet-Brewery/pics/Plavo-pivolada.png",
-  },
-  {
-    name: "Porter",
-    price: "350 RSD",
-    description: "Chocolate / 0.25l",
-    img: "../Kabinet-Brewery/pics/Porter-pivolada.png",
-  },
-  {
-    name: "Shop now",
-    img: "../Kabinet-Brewery/pics/shop-now.png",
-  },
-];
 const kabinetProductsPivoladaSwiperWrapper = document.querySelector(
   ".swiper-kabinet-products-pivolada .swiper-wrapper"
 );
-kabinetProductsPivoladaSlider.forEach((element) => {
+KABINET_PRODUCTS_PIVOLADA_LIST.forEach((element) => {
   if (element.name && element.price && element.description && element.img) {
     kabinetProductsPivoladaSwiperWrapper.insertAdjacentHTML(
       "beforeend",
@@ -339,30 +237,10 @@ pivoladaTabButton.onclick = () => {
   merchSwiper.classList.add("hidden");
 };
 // ======================= News slider =======================
-const newsSlider = [
-  {
-    date: "03 mar 2022",
-    title: "Spring is almost here, it is the time for discounts!",
-    imgSmall: "../Kabinet-Brewery/pics/news/2022-03-03-Spring.png",
-    imgBig: "",
-  },
-  {
-    date: "02 FeB 2022",
-    title: "Seventh Birthday Kabinet Brewery!",
-    imgSmall: "",
-    imgBig: "../Kabinet-Brewery/pics/news/2022-02-02-Birthday.png",
-  },
-  {
-    date: "02 FeB 2022",
-    title: "III birthday of our bread with wild yeast!",
-    imgSmall: "../Kabinet-Brewery/pics/news/2022-05-05-Birthday.png",
-    imgBig: "",
-  },
-];
 const newsSwiperWrapper = document.querySelector(
   ".swiper-latest-news .swiper-wrapper"
 );
-newsSlider.forEach((element, i) => {
+NEWS_LIST.forEach((element, i) => {
   if (i === 0 || i === 2) {
     newsSwiperWrapper.insertAdjacentHTML(
       "beforeend",
@@ -402,36 +280,8 @@ document.querySelector(".back-to-top button").onclick = () => {
   });
 };
 // ======================= Footer menu list =======================
-const footerMenuArr = [
-  {
-    name: "SHOP",
-    list: [
-      "ALL",
-      "BEER PACKS",
-      "BEER",
-      "PIVOLADA",
-      "MERCH",
-      "TERMS OF SERVICE",
-      "REFUND POLICY",
-    ],
-  },
-  {
-    name: "ABOUT US",
-    list: ["ABOUT", "ART", "NEWS"],
-  },
-  {
-    name: "HELP",
-    list: [
-      "CONTACT",
-      "SHIPPING",
-      "RETURNED",
-      "TERMS & CONDITIONS",
-      "PRIVACY POLICY",
-    ],
-  },
-];
 const footerMenuWrapper = document.querySelector(".list-menu-footer");
-footerMenuArr.forEach((element, i) => {
+FOOTER_MENU_LIST.forEach((element, i) => {
   let ul = document.createElement("ul");
   footerMenuWrapper.insertAdjacentHTML(
     "beforeend",
