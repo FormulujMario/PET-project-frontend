@@ -6,6 +6,7 @@ import {
   NEWS_LIST,
 } from "./modules/costants.js";
 import { menuListDisplay } from "./modules/header/header.js";
+import { pageTitleDisplay } from "./modules/page-title.js";
 import {
   backToTopButton,
   footerMenuListDisplay,
@@ -14,15 +15,7 @@ import {
 // ======================= Menu header =======================
 menuListDisplay();
 // ======================= Page title =======================
-let title = document.querySelector("main h1").innerHTML;
-if (title.length > 12) {
-  document.querySelector("main h1").innerHTML = "";
-  title.split(" ").forEach((word) => {
-    document
-      .querySelector("main h1")
-      .insertAdjacentHTML("beforeend", `<span>${word}</span>`);
-  });
-}
+pageTitleDisplay();
 // ======================= Main page top slider =======================
 const swiperMainPage = new Swiper(".swiper-main-page", {
   direction: "horizontal",
