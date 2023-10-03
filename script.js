@@ -4,9 +4,13 @@ import {
   KABINET_PRODUCTS_MERCH_LIST,
   KABINET_PRODUCTS_PIVOLADA_LIST,
   NEWS_LIST,
-  FOOTER_MENU_LIST,
 } from "./modules/costants.js";
 import { menuListDisplay } from "./modules/header/header.js";
+import {
+  backToTopButton,
+  footerMenuListDisplay,
+  socNetIconsDisplay,
+} from "./modules/footer/footer.js";
 // ======================= Menu header =======================
 menuListDisplay();
 // ======================= Page title =======================
@@ -269,26 +273,7 @@ const swiperNews = new Swiper(".swiper-latest-news", {
   slidesPerView: 3,
 });
 // ======================= Back to top button =======================
-document.querySelector(".back-to-top button").onclick = () => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-};
-// ======================= Footer menu list =======================
-const footerMenuWrapper = document.querySelector(".list-menu-footer");
-FOOTER_MENU_LIST.forEach((element, i) => {
-  let ul = document.createElement("ul");
-  footerMenuWrapper.insertAdjacentHTML(
-    "beforeend",
-    `<div class="column-${i + 1}">
-    <span>${element.name}</span>
-      </div>`
-  );
-  element.list.forEach((subelement) => {
-    ul.insertAdjacentHTML("beforeend", `<li>${subelement}</li>`);
-  });
-  let divAppend = document.querySelector(`.column-${i + 1}`);
-  divAppend.appendChild(ul);
-});
+backToTopButton();
+// ======================= Footer menu list =========================
+footerMenuListDisplay();
+socNetIconsDisplay();
