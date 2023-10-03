@@ -11,31 +11,31 @@
       rel="stylesheet"
     />
     <link
-      href="../Kabinet-Brewery/modules/slider/swiper-bundle.min.css"
+      href="./modules/slider/swiper-bundle.min.css"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="../Kabinet-Brewery/style.css"
+      href="./style.css"
       rel="stylesheet"
       type="text/css"
     />
   </head>
   <body>
-    <!--#include virtual="../Kabinet-Brewery/modules/header/header.html" -->
+    <!--#include virtual="./modules/header/header.html" -->
     <main>
       <h1>CRAFT BREWERY</h1>
       <section class="slider">
         <div class="swiper swiper-main-page">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="../Kabinet-Brewery/pics/slider.png" alt="" />
+              <img src="./pics/slider.png" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="../Kabinet-Brewery/pics/slider.png" alt="" />
+              <img src="./pics/slider.png" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="../Kabinet-Brewery/pics/slider.png" alt="" />
+              <img src="./pics/slider.png" alt="" />
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -75,7 +75,7 @@
           <h2>BEER CREATES<br />GREAT EXCITEMENT</h2>
         </div>
         <img
-          src="../Kabinet-Brewery/pics/link-to-about-us-main-page.png"
+          src="./pics/link-to-about-us-main-page.png"
           alt=""
         />
         <div class="align-right">
@@ -133,7 +133,7 @@
         </div>
       </section>
       <section class="trip-to-kabinet-lounge">
-        <img src="../Kabinet-Brewery/pics/trip-to-kabinet-lounge.png" alt="" />
+        <img src="./pics/trip-to-kabinet-lounge.png" alt="" />
         <div class="kabinet-lounge-title">
           <div class="kabinet-lounge-title-h2">
             <h2>KABINET LOUNGE<br />A PLACE FOR ALL<br />THE SENSES</h2>
@@ -281,7 +281,7 @@
         </section>
       </section>
     </footer>
-    <script src="../Kabinet-Brewery/modules/slider/swiper-bundle.min.js"></script>
-    <script type="module" src="../Kabinet-Brewery/script.js"></script>
+    <script src="./modules/slider/swiper-bundle.min.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>

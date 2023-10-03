@@ -5,8 +5,8 @@ import {
   KABINET_PRODUCTS_PIVOLADA_LIST,
   NEWS_LIST,
   FOOTER_MENU_LIST,
-} from "../Kabinet-Brewery/modules/costants.js";
-import { menuListDisplay } from "../Kabinet-Brewery/modules/header/header.js";
+} from "./modules/costants.js";
+import { menuListDisplay } from "./modules/header/header.js";
 // ======================= Menu header =======================
 menuListDisplay();
 // ======================= Page title =======================
