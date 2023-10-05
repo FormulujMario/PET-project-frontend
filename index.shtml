@@ -25,13 +25,13 @@
         <div class="swiper swiper-main-page">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="/pics/slider.png" alt="" />
+              <img src="./pics/slider.png" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="/pics/slider.png" alt="" />
+              <img src="./pics/slider.png" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="/pics/slider.png" alt="" />
+              <img src="./pics/slider.png" alt="" />
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -70,7 +70,7 @@
         <div class="section-title">
           <h2>BEER CREATES<br />GREAT EXCITEMENT</h2>
         </div>
-        <img src="/pics/link-to-about-us-main-page.png" alt="" />
+        <img src="./pics/link-to-about-us-main-page.png" alt="" />
         <div class="align-right">
           <p>
             We are searching for new and unusual tastes, while aiming to offer
@@ -126,7 +126,7 @@
         </div>
       </section>
       <section class="trip-to-kabinet-lounge">
-        <img src="/pics/trip-to-kabinet-lounge.png" alt="" />
+        <img src="./pics/trip-to-kabinet-lounge.png" alt="" />
         <div class="kabinet-lounge-title">
           <div class="kabinet-lounge-title-h2">
             <h2>KABINET LOUNGE<br />A PLACE FOR ALL<br />THE SENSES</h2>
