@@ -1,4 +1,6 @@
+// ======================= Menu header =======================
 export const MENU_LIST = ["SHOP", "ABOUT", "ART", "NEWS", "CONTACT"];
+// ======================= Main page =======================
 export const BESTSELLERS_LIST = [
   {
     name: "Super nova",
@@ -129,6 +131,7 @@ export const NEWS_LIST = [
     imgBig: "",
   },
 ];
+// ======================= Footer =======================
 export const FOOTER_MENU_LIST = [
   {
     name: "SHOP",
@@ -222,4 +225,139 @@ xmlns="http://www.w3.org/2000/svg"
 </svg>`,
     link: "",
   },
+];
+// ======================= Shop main page =======================
+export const SHOP_MAIN_BEERS_LIST = [
+  {
+    name: "Super nova",
+    price: "230 RSD",
+    description: "IPA / abv 5.0% / ibu 26 / 0.33l",
+    img: "../pics/SuperNova.png",
+  },
+  {
+    name: "Lutka",
+    price: "230 RSD",
+    description: "IPA / abv 4.7% / ibu 15 / 0.33l",
+    img: "../pics/Lutka.png",
+  },
+  {
+    name: "Plavo",
+    price: "230 RSD",
+    description: "IPA / abv 6.2% / ibu 26 / 0.33l",
+    img: "../pics/Plavo.png",
+  },
+  {
+    name: "Porter",
+    price: "235 RSD",
+    description: "IPA / abv 6.0% / ibu 30 / 0.33l",
+    img: "../pics/Porter.png",
+  },
+  {
+    name: "Disko",
+    price: "255 RSD",
+    description: "IPA / abv 5.6% / ibu 40 / 0.33l",
+    img: "../pics/Disko.png",
+  },
+  {
+    name: "Konfuzije",
+    price: "260 RSD",
+    description: "lager / abv 6.3% / ibu 60 / 0.33l",
+    img: "../pics/Konfuzije.png",
+  },
+  {
+    name: "Trag",
+    price: "230 RSD",
+    description: "Ale / abv 4.7 %% / ibu 15 / 0.33l",
+    img: "../pics/Trag.png",
+  },
+  {
+    name: "Pixie Dust",
+    price: "240 RSD",
+    description: "stout / abv 4.3 % / ibu 30 / 0.33l",
+    img: "../pics/Pixie-Dust.png",
+  },
+  {
+    name: "Bang",
+    price: "250 RSD",
+    description: "IPA / abv 4.6% / ibu 40 / 0.33l",
+    img: "../pics/Bang.png",
+  },
+  {
+    name: "Carica",
+    price: "250 RSD",
+    description: "stout / abv 9.5% / ibu 60 / 0.33l",
+    img: "../pics/Carica.png",
+  },
+  {
+    name: "Hop Stew",
+    price: "245 RSD",
+    description: "Ale / abv 4.9 %% / ibu 20 / 0.33l",
+    img: "../pics/Hop-Stew.png",
+  },
+  {
+    name: "MiLLe",
+    price: "240 RSD",
+    description: "stout / abv 5.0 % / ibu 30 / 0.33l",
+    img: "../pics/MiLLe.png",
+  }
+];
+export const SHOP_MAIN_BEER_PACKS_LIST = [
+  {
+    name: "Kabinet",
+    price: "1450 RSD",
+    description: "6x0.33l",
+    img: "../pics/Kabinet.png",
+  },
+  {
+    name: "Nature & society",
+    price: "1050 RSD",
+    description: "4x0.33l",
+    img: "../pics/NatureSociety.png",
+  },
+  {
+    name: "Hold me tender…",
+    price: "230 RSD",
+    description: "4x0.33l",
+    img: "../pics/HoldMeTender.png",
+  }
+];
+export const SHOP_MAIN_PIVOLADA_LIST = [
+  {
+    name: "BrrKaaa",
+    price: "350 RSD",
+    description: "Citrus / 0.25l",
+    img: "../pics/BrrKaaa-pivolada.png",
+  },
+  {
+    name: "Plavo",
+    price: "350 RSD",
+    description: "Floral / 0.25l",
+    img: "../pics/Plavo-pivolada.png",
+  },
+  {
+    name: "Porter",
+    price: "350 RSD",
+    description: "Chocolate / 0.25l",
+    img: "../pics/Porter-pivolada.png",
+  }
+];
+export const SHOP_MAIN_MERCH_LIST = [
+  {
+    name: "Kabinet",
+    price: "1200 RSD",
+    description: "T-shirt",
+    img: "../pics/kabinet-t-short.png",
+  },
+  {
+    name: "BrrKaaa",
+    price: "350 RSD",
+    description: "Tote bag",
+    img: "../pics/BrrKaaa-bag.png",
+  },
+  {
+    name: "Lutka",
+    price: "350 RSD",
+    description: "Tote bag",
+    img: "../pics/Lutka-bag.png",
+  }
 ];

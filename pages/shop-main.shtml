@@ -21,8 +21,47 @@
     <!--#include virtual="../modules/header/header.html" -->
     <main>
       <h1>KABINET SHOP</h1>
-      
-      
+      <section class="shop-section">
+        <div class="section-title">
+      <div class="tab-buttons">
+        <button class="normal-button white-button all-tab active">
+          ALL
+        </button>
+        <button class="normal-button white-button beer-packs-tab disabled">
+          BEER PACKS
+        </button>
+        <button class="normal-button white-button beers-tab disabled">
+          BEERS
+        </button>
+        <button class="normal-button white-button pivolada-tab disabled">
+          PIVOLADA
+        </button>
+        <button class="normal-button white-button merch-tab disabled">
+          MERCH
+        </button>
+        
+
+      </div>
+    </div>
+    <div class="shop-category-with-title beer-packs-category">
+      <h2>BEER PACKS</h2>
+    <div class="shop-category beer-packs-section visible">
+    </div></div>
+    <div class="shop-category-with-title beers-category">
+      <h2>BEERS</h2>
+    <div class="shop-category beers-section visible">
+    </div></div>
+    <div class="shop-category-with-title pivolada-category">
+      <h2>PIVOLADA</h2>
+    <div class="shop-category pivolada-section visible">
+    </div></div>
+    <div class="shop-category-with-title merch-category">
+      <h2>MERCH</h2>
+    <div class="shop-category merch-section visible">
+    </div></div>
+    
+    </section>
+    <section class="next-shop-category"></section>
     </main>
     <!--#include virtual="../modules/footer/footer.html" -->
     <script src="../modules/slider/swiper-bundle.min.js"></script>

@@ -19,7 +19,7 @@ h2 {
 h4 {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   margin-top: 15px;
   margin-bottom: 0;
 }
@@ -386,4 +386,27 @@ main {
   color: #ffffff80;
   font-size: 0.9vw;
   padding-bottom: 25px;
+}
+
+.shop-category-with-title h2 {
+  margin-top: 50px;
+}
+.shop-category{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px 30px;
+  
+}
+.shop-item-img{
+  border-radius: 8px;
+  border: 1px solid #000;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.shop-item-img img {
+  width: 100%;
+}
+.shop-item-title{
+  display: flex;
+  justify-content: space-between;
 }
