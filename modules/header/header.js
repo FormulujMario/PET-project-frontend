@@ -1,4 +1,4 @@
-import { MENU_LIST } from "../costants.js";
+import { MENU_LIST } from "../constants.js";
 const logoImg = document.querySelector(".logo img");
 export const logoImgDisplay = () => {
   if (document.URL.includes("index")) {

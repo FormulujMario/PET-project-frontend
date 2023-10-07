@@ -10,7 +10,7 @@ import {
   SHOP_MAIN_BEER_PACKS_LIST,
   SHOP_MAIN_PIVOLADA_LIST,
   SHOP_MAIN_MERCH_LIST,
-} from "../modules/costants.js";
+} from "../modules/constants.js";
 // ======================= Menu header =======================
 logoImgDisplay();
 menuListDisplay();
