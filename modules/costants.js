@@ -1,6 +1,6 @@
 // ======================= Menu header =======================
 export const MENU_LIST = ["SHOP", "ABOUT", "ART", "NEWS", "CONTACT"];
-// ======================= Main page =======================
+// ======================= Index page =======================
 export const BESTSELLERS_LIST = [
   {
     name: "Super nova",
@@ -299,7 +299,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     price: "240 RSD",
     description: "stout / abv 5.0 % / ibu 30 / 0.33l",
     img: "../pics/MiLLe.png",
-  }
+  },
 ];
 export const SHOP_MAIN_BEER_PACKS_LIST = [
   {
@@ -319,7 +319,7 @@ export const SHOP_MAIN_BEER_PACKS_LIST = [
     price: "230 RSD",
     description: "4x0.33l",
     img: "../pics/HoldMeTender.png",
-  }
+  },
 ];
 export const SHOP_MAIN_PIVOLADA_LIST = [
   {
@@ -339,7 +339,7 @@ export const SHOP_MAIN_PIVOLADA_LIST = [
     price: "350 RSD",
     description: "Chocolate / 0.25l",
     img: "../pics/Porter-pivolada.png",
-  }
+  },
 ];
 export const SHOP_MAIN_MERCH_LIST = [
   {
@@ -359,5 +359,5 @@ export const SHOP_MAIN_MERCH_LIST = [
     price: "350 RSD",
     description: "Tote bag",
     img: "../pics/Lutka-bag.png",
-  }
+  },
 ];

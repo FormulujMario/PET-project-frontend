@@ -1,5 +1,11 @@
+/*********************** Universal styles ***********************/
 body {
   font-family: "Inter", sans-serif;
+}
+main {
+  padding-left: 25px;
+  padding-bottom: 25px;
+  padding-right: 25px;
 }
 h1 {
   display: flex;
@@ -116,11 +122,19 @@ header {
   align-items: center;
   margin-top: 30px;
 }
-main {
-  padding-left: 25px;
-  padding-bottom: 25px;
-  padding-right: 25px;
+.section-title .tab-buttons {
+  display: flex;
+  gap: 12px;
 }
+.disabled {
+  border: 1px solid #999999;
+  color: #999999;
+}
+.active {
+  background-color: #000;
+  color: #fff;
+}
+/*********************** Header ***********************/
 .menu {
   display: flex;
   justify-content: space-between;
@@ -149,9 +163,11 @@ main {
   text-decoration: none;
   color: inherit;
 }
+/*********************** Top swiper Index page ***********************/
 .swiper-main-page {
   border-radius: 15px;
 }
+/*********************** Link to about us Index page ***********************/
 .link-to-about-us {
   display: flex;
   flex-direction: column;
@@ -171,18 +187,7 @@ main {
   font-size: 1.5vw;
   width: 45%;
 }
-.section-title .tab-buttons {
-  display: flex;
-  gap: 12px;
-}
-.disabled {
-  border: 1px solid #999999;
-  color: #999999;
-}
-.active {
-  background-color: #000;
-  color: #fff;
-}
+/*********************** Kabinet Products Index page ***********************/
 .swiper-slide-item-shop-now {
   display: flex;
   flex-direction: column;
@@ -217,6 +222,7 @@ main {
   color: #fff;
   z-index: 99;
 }
+/*********************** Trip to kabinet lounge Index page ***********************/
 .trip-to-kabinet-lounge {
   margin-top: 70px;
   display: flex;
@@ -248,6 +254,7 @@ main {
   display: flex;
   justify-content: space-between;
 }
+/*********************** Latest news Index page ***********************/
 .swiper-latest-news .swiper-wrapper {
   display: flex;
   justify-content: space-between;
@@ -271,6 +278,7 @@ main {
 .swiper-latest-news h4 {
   margin-top: 5px;
 }
+/*********************** Footer ***********************/
 .back-to-top {
   display: flex;
   justify-content: flex-end;
@@ -288,6 +296,7 @@ main {
   margin-top: 60px;
   margin-bottom: 25px;
   margin-right: 25px;
+  cursor: pointer;
 }
 .back-to-top button:hover {
   color: #000000;
@@ -387,17 +396,16 @@ main {
   font-size: 0.9vw;
   padding-bottom: 25px;
 }
-
+/*********************** Shop Main page ***********************/
 .shop-category-with-title h2 {
   margin-top: 50px;
 }
-.shop-category{
+.shop-category {
   display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 50px 30px;
-  
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px 30px;
 }
-.shop-item-img{
+.shop-item-img {
   border-radius: 8px;
   border: 1px solid #000;
   padding-top: 50px;
@@ -406,7 +414,44 @@ main {
 .shop-item-img img {
   width: 100%;
 }
-.shop-item-title{
+.shop-item-title {
   display: flex;
   justify-content: space-between;
+}
+.next-shop-category {
+  display: flex;
+  margin-top: 60px;
+}
+.next-shop-category img {
+  width: 100%;
+}
+.next-shop-category-title {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.next-shop-category-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 4vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+.next-shop-category:hover {
+  cursor: pointer;
+}
+.next-shop-category-button {
+  cursor: pointer;
+}
+.next-shop-category svg {
+  transition: transform 1s;
+}
+.next-shop-category:hover svg {
+  cursor: pointer;
+  transform: rotate(180deg);
 }
