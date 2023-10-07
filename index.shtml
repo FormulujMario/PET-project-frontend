@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kabinet Brewery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="./modules/slider/swiper-bundle.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!--#include virtual="./modules/header/header.html" -->
+    <main>
+      <h1>CRAFT BREWERY</h1>
+      <section class="slider">
+        <div class="swiper swiper-main-page">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./pics/slider.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./pics/slider.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./pics/slider.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="bestsellers">
+        <div class="section-title">
+          <h2>BESTSELLERS</h2>
+          <button class="normal-button white-button">
+            SEE ALL
+            <svg
+              width="11"
+              height="11"
+              viewBox="0 0 11 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.6671 0.705729H9.86243L0.579102 9.98906L1.05043 10.4604L10.3338 1.17706V8.3724H11.0004V0.0390625H2.6671V0.705729Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="bestsellers-products">
+          <div class="swiper swiper-bestsellers">
+            <div class="swiper-wrapper"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="link-to-about-us">
+        <div class="section-title">
+          <h2>BEER CREATES<br />GREAT EXCITEMENT</h2>
+        </div>
+        <img src="./pics/link-to-about-us-main-page.png" alt="" />
+        <div class="align-right">
+          <p>
+            We are searching for new and unusual tastes, while aiming to offer
+            the highest quality craft beers from the selected ingredients, thus
+            we have created Kabinet Brewery.
+          </p>
+          <button class="normal-button white-button">
+            ABOUT US
+            <svg
+              width="11"
+              height="11"
+              viewBox="0 0 11 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.6671 0.705729H9.86243L0.579102 9.98906L1.05043 10.4604L10.3338 1.17706V8.3724H11.0004V0.0390625H2.6671V0.705729Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="kabinet-products">
+        <div class="section-title">
+          <h2>KABINET PRODUCTS</h2>
+          <div class="tab-buttons">
+            <button class="normal-button white-button beers-tab active">
+              BEERS
+            </button>
+            <button class="normal-button white-button merch-tab disabled">
+              MERCH
+            </button>
+            <button class="normal-button white-button pivolada-tab disabled">
+              PIVOLADA
+            </button>
+          </div>
+        </div>
+        <div class="swiper swiper-kabinet-products-beers visible">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper swiper-kabinet-products-merch hidden">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper swiper-kabinet-products-pivolada hidden">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="trip-to-kabinet-lounge">
+        <img src="./pics/trip-to-kabinet-lounge.png" alt="" />
+        <div class="kabinet-lounge-title">
+          <div class="kabinet-lounge-title-h2">
+            <h2>KABINET LOUNGE<br />A PLACE FOR ALL<br />THE SENSES</h2>
+          </div>
+          <div class="kabinet-lounge-title-desc">
+            <p>
+              While your imagination flourishes, the flavors inspire you to try
+              one of over 20 unique beers. On top of that, experience slowly
+              cooked dishes, with the stamp of our experienced chef Max.
+            </p>
+            <div class="kabinet-lounge-title-buttons">
+              <button class="normal-button transparent-button">
+                VIEW MORE
+              </button>
+              <button class="normal-button white-button-without-border">
+                ONLINE RESERVATION
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="latest-news">
+        <div class="section-title">
+          <h2>LATEST NEWS</h2>
+          <button class="normal-button white-button">
+            SEE ALL
+            <svg
+              width="11"
+              height="11"
+              viewBox="0 0 11 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.6671 0.705729H9.86243L0.579102 9.98906L1.05043 10.4604L10.3338 1.17706V8.3724H11.0004V0.0390625H2.6671V0.705729Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="swiper swiper-latest-news">
+          <div class="swiper-wrapper"></div>
+        </div>
+      </section>
+    </main>
+    <!--#include virtual="./modules/footer/footer.html" -->
+    <script src="./modules/slider/swiper-bundle.min.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
