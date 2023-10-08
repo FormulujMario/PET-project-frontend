@@ -133,7 +133,6 @@ header {
 .active {
   border: 1px solid #000000;
   color: #000000;
-  ;
 }
 /*********************** Header ***********************/
 .menu {
@@ -418,6 +417,9 @@ header {
 .shop-item-title {
   display: flex;
   justify-content: space-between;
+}
+.shop-item {
+  text-transform: uppercase;
 }
 .next-shop-category {
   display: flex;
