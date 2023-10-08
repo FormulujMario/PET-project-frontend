@@ -458,3 +458,59 @@ header {
   cursor: pointer;
   transform: rotate(180deg);
 }
+/*********************** Shop filters ***********************/
+.filters-section {
+  margin-top: 30px;
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+  color: #000000b2;
+}
+.filters-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 50px 30px;
+}
+.filter-title {
+  font-weight: 500;
+  color: #000;
+}
+.filters-wrapper div {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.filters-wrapper input {
+  display: none;
+}
+.filters-wrapper input + label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.filters-wrapper input + label:before {
+  content: "";
+  border: 1px solid #0000004d;
+  border-radius: 2px;
+  height: 13px;
+  width: 13px;
+}
+.filters-wrapper input:checked + label:before {
+  background-color: #000;
+  border-color: #000;
+}
+.clear-button {
+  display: flex;
+  justify-content: flex-end;
+}
+.clear-button button {
+  background-color: transparent;
+  border: none;
+  color: #00000080;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.clear-button button:hover {
+  color: #000000;
+}

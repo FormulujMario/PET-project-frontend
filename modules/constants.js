@@ -361,3 +361,21 @@ export const SHOP_MAIN_MERCH_LIST = [
     img: "../pics/Lutka-bag.png",
   },
 ];
+// ======================= Shop filters =======================
+export const SORT_BY = [
+  "Popularity",
+  "Average rating",
+  "Newness",
+  "Low to high price",
+  "High to low price",
+];
+export const STYLE = [
+  "Ale",
+  "Lager",
+  "Ipa",
+  "Sour",
+  "Dark",
+  "Lable",
+  "Herb/Spice/Fruit",
+  "Hoppy",
+];

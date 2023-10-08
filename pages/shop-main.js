@@ -10,6 +10,8 @@ import {
   SHOP_MAIN_BEER_PACKS_LIST,
   SHOP_MAIN_PIVOLADA_LIST,
   SHOP_MAIN_MERCH_LIST,
+  SORT_BY,
+  STYLE,
 } from "../modules/constants.js";
 // ======================= Menu header =======================
 logoImgDisplay();
@@ -189,6 +191,30 @@ pivoladaTabButton.onclick = () => {
   pivoladaShopCategory.classList.remove("visible", "hidden");
   pivoladaShopCategory.classList.add("visible");
 };
+// ======================= Filters - sort by =======================
+const filtersSortBySection = document.querySelector(".sort-by");
+SORT_BY.forEach((element) => {
+  filtersSortBySection.insertAdjacentHTML(
+    "beforeend",
+    `
+              <div class="${element.replace(/ /g, "-")}">
+              ${element}
+              </div>`
+  );
+});
+// ======================= Filters - style =======================
+const filtersStyleSection = document.querySelector(".style");
+STYLE.forEach((element) => {
+  const id = element.replace(/\//g, "-");
+  filtersStyleSection.insertAdjacentHTML(
+    "beforeend",
+    `
+      <div>
+      <input type="checkbox" id="${id}" name="${id}"/>
+      <label for="${id}">${element}</label>
+    </div>`
+  );
+});
 // ======================= Back to top button =======================
 backToTopButton();
 // ======================= Footer menu list =========================

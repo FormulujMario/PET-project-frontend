@@ -41,6 +41,61 @@
             </button>
           </div>
         </div>
+        <div class="filters-section beers-filter">
+          <div class="filters-wrapper">
+            <div class="sort-by">
+              <p class="filter-title">Sort by</p>
+            </div>
+            <div class="style">
+              <p class="filter-title">Style</p>
+            </div>
+            <div class="alcohol">
+              <p class="filter-title">Alcohol</p>
+              <div>
+                <input type="checkbox" id="zero-five" name="zero-five" />
+                <label for="zero-five">0% - 5%</label>
+              </div>
+              <div>
+                <input type="checkbox" id="five-seven" name="five-seven" />
+                <label for="five-seven">5% - 7%</label>
+              </div>
+              <div>
+                <input type="checkbox" id="over-seven" name="over-seven" />
+                <label for="over-seven">Over 7%</label>
+              </div>
+            </div>
+            <div class="color">
+              <p class="filter-title">Color</p>
+              <div>
+                <input
+                  type="checkbox"
+                  id="to-fifteen-ebc"
+                  name="to-fifteen-ebc"
+                />
+                <label for="to-fifteen-ebc">To 15 EBC</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="fifteen-fourty-ebc"
+                  name="fifteen-fourty-ebc"
+                />
+                <label for="fifteen-fourty-ebc">15 - 40 EBC</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="over-fourty-ebc"
+                  name="over-fourty-ebc"
+                />
+                <label for="over-fourty-ebc">Over 40 EBC</label>
+              </div>
+            </div>
+          </div>
+          <div class="clear-button">
+            <button>CLEAR ALL FILTERS</button>
+          </div>
+        </div>
         <div class="shop-category-with-title beer-packs-category">
           <h2>BEER PACKS</h2>
           <div class="shop-category beer-packs-section visible"></div>
