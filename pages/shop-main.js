@@ -18,62 +18,41 @@ logoImgDisplay();
 menuListDisplay();
 // ======================= Page title =======================
 pageTitleDisplay();
+// ======================= Category display function =======================
+const categoryDisplay = (section, list) => {
+  if (section.querySelectorAll(".shop-item")) {
+    Array(...section.querySelectorAll(".shop-item")).forEach((element) =>
+      element.remove()
+    );
+  }
+  list.forEach((element) => {
+    section.insertAdjacentHTML(
+      "beforeend",
+      `
+            <div class="shop-item">
+            <div class="shop-item-img"><img src="${element.img}" alt=""></div>
+            <div class="shop-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div>
+            <p>${element.description}</p>
+            </div>`
+    );
+  });
+};
 // ======================= Shop Main Beer Packs =======================
 const shopBeerPacksSection = document.querySelector(
   ".shop-category.beer-packs-section"
 );
-SHOP_MAIN_BEER_PACKS_LIST.forEach((element) => {
-  shopBeerPacksSection.insertAdjacentHTML(
-    "beforeend",
-    `
-            <div class="shop-item">
-            <div class="shop-item-img"><img src="${element.img}" alt=""></div>
-            <div class="shop-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div>
-            <p>${element.description}</p>
-            </div>`
-  );
-});
+categoryDisplay(shopBeerPacksSection, SHOP_MAIN_BEER_PACKS_LIST);
 // ======================= Shop Main Beers =======================
 const shopBeersSection = document.querySelector(".shop-category.beers-section");
-SHOP_MAIN_BEERS_LIST.forEach((element) => {
-  shopBeersSection.insertAdjacentHTML(
-    "beforeend",
-    `
-            <div class="shop-item">
-            <div class="shop-item-img"><img src="${element.img}" alt=""></div>
-            <div class="shop-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div>
-            <p>${element.description}</p>
-            </div>`
-  );
-});
+categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
 // ======================= Shop Main Pivolada =======================
 const shopPivoladaSection = document.querySelector(
   ".shop-category.pivolada-section"
 );
-SHOP_MAIN_PIVOLADA_LIST.forEach((element) => {
-  shopPivoladaSection.insertAdjacentHTML(
-    "beforeend",
-    `
-            <div class="shop-item">
-            <div class="shop-item-img"><img src="${element.img}" alt=""></div>
-            <div class="shop-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div>
-            <p>${element.description}</p>
-            </div>`
-  );
-});
+categoryDisplay(shopPivoladaSection, SHOP_MAIN_PIVOLADA_LIST);
 // ======================= Shop Main Merch =======================
 const shopMerchSection = document.querySelector(".shop-category.merch-section");
-SHOP_MAIN_MERCH_LIST.forEach((element) => {
-  shopMerchSection.insertAdjacentHTML(
-    "beforeend",
-    `
-            <div class="shop-item">
-            <div class="shop-item-img"><img src="${element.img}" alt=""></div>
-            <div class="shop-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div>
-            <p>${element.description}</p>
-            </div>`
-  );
-});
+categoryDisplay(shopMerchSection, SHOP_MAIN_MERCH_LIST);
 // ======================= Shop Main Tab buttons =======================
 const allTabButton = document.querySelector(".all-tab");
 const beerPackTabButton = document.querySelector(".beer-packs-tab");
@@ -197,11 +176,20 @@ SORT_BY.forEach((element) => {
   filtersSortBySection.insertAdjacentHTML(
     "beforeend",
     `
-              <div class="${element.replace(/ /g, "-")}">
+              <div class="${element.replace(/ /g, "-").toLowerCase()}">
               ${element}
               </div>`
   );
 });
+// ======================= popularity =======================
+const popularityDiv = document.querySelector(".popularity");
+popularityDiv.addEventListener("click", () => {
+  SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
+    return a.popularity - b.popularity;
+  });
+  categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+});
+
 // ======================= Filters - style =======================
 const filtersStyleSection = document.querySelector(".style");
 STYLE.forEach((element) => {
