@@ -189,7 +189,14 @@ popularityDiv.addEventListener("click", () => {
   });
   categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
 });
-
+// ======================= average rating =======================
+const averageRatingDiv = document.querySelector(".average-rating");
+averageRatingDiv.addEventListener("click", () => {
+  SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
+    return a.averageRating - b.averageRating;
+  });
+  categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+});
 // ======================= Filters - style =======================
 const filtersStyleSection = document.querySelector(".style");
 STYLE.forEach((element) => {
