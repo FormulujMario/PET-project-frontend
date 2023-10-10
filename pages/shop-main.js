@@ -31,7 +31,7 @@ const categoryDisplay = (section, list) => {
       `
             <div class="shop-item">
             <div class="shop-item-img"><img src="${element.img}" alt=""></div>
-            <div class="shop-item-title"><h4>${element.name}</h4><h4>${element.price}</h4></div>
+            <div class="shop-item-title"><h4>${element.name}</h4><h4>${element.price} ${element.currency}</h4></div>
             <p>${element.description}</p>
             </div>`
     );
@@ -202,6 +202,14 @@ const newnessDiv = document.querySelector(".newness");
 newnessDiv.addEventListener("click", () => {
   SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
     return a.added - b.added;
+  });
+  categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+});
+// ======================= low to high price =======================
+const lowToHighPriceDiv = document.querySelector(".low-to-high-price");
+lowToHighPriceDiv.addEventListener("click", () => {
+  SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
+    return a.price - b.price;
   });
   categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
 });

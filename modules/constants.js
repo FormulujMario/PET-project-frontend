@@ -230,7 +230,8 @@ xmlns="http://www.w3.org/2000/svg"
 export const SHOP_MAIN_BEERS_LIST = [
   {
     name: "Super nova",
-    price: "230 RSD",
+    price: 230,
+    currency: 'RSD',
     description: "IPA / abv 5.0% / ibu 26 / 0.33l",
     img: "../pics/SuperNova.png",
     popularity: Math.random() * 10,
@@ -239,7 +240,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Lutka",
-    price: "230 RSD",
+    price: 230,
+    currency: 'RSD',
     description: "IPA / abv 4.7% / ibu 15 / 0.33l",
     img: "../pics/Lutka.png",
     popularity: Math.random() * 10,
@@ -248,7 +250,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Plavo",
-    price: "230 RSD",
+    price: 230,
+    currency: 'RSD',
     description: "IPA / abv 6.2% / ibu 26 / 0.33l",
     img: "../pics/Plavo.png",
     popularity: Math.random() * 10,
@@ -257,7 +260,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Porter",
-    price: "235 RSD",
+    price: 235,
+    currency: 'RSD',
     description: "IPA / abv 6.0% / ibu 30 / 0.33l",
     img: "../pics/Porter.png",
     popularity: Math.random() * 10,
@@ -266,7 +270,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Disko",
-    price: "255 RSD",
+    price: 255,
+    currency: 'RSD',
     description: "IPA / abv 5.6% / ibu 40 / 0.33l",
     img: "../pics/Disko.png",
     popularity: Math.random() * 10,
@@ -275,7 +280,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Konfuzije",
-    price: "260 RSD",
+    price: 260,
+    currency: 'RSD',
     description: "lager / abv 6.3% / ibu 60 / 0.33l",
     img: "../pics/Konfuzije.png",
     popularity: Math.random() * 10,
@@ -284,7 +290,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Trag",
-    price: "230 RSD",
+    price: 230,
+    currency: 'RSD',
     description: "Ale / abv 4.7 %% / ibu 15 / 0.33l",
     img: "../pics/Trag.png",
     popularity: Math.random() * 10,
@@ -293,7 +300,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Pixie Dust",
-    price: "240 RSD",
+    price: 240,
+    currency: 'RSD',
     description: "stout / abv 4.3 % / ibu 30 / 0.33l",
     img: "../pics/Pixie-Dust.png",
     popularity: Math.random() * 10,
@@ -302,7 +310,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Bang",
-    price: "250 RSD",
+    price: 250,
+    currency: 'RSD',
     description: "IPA / abv 4.6% / ibu 40 / 0.33l",
     img: "../pics/Bang.png",
     popularity: Math.random() * 10,
@@ -311,7 +320,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Carica",
-    price: "250 RSD",
+    price: 250,
+    currency: 'RSD',
     description: "stout / abv 9.5% / ibu 60 / 0.33l",
     img: "../pics/Carica.png",
     popularity: Math.random() * 10,
@@ -320,7 +330,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "Hop Stew",
-    price: "245 RSD",
+    price: 245,
+    currency: 'RSD',
     description: "Ale / abv 4.9 %% / ibu 20 / 0.33l",
     img: "../pics/Hop-Stew.png",
     popularity: Math.random() * 10,
@@ -329,7 +340,8 @@ export const SHOP_MAIN_BEERS_LIST = [
   },
   {
     name: "MiLLe",
-    price: "240 RSD",
+    price: 240,
+    currency: 'RSD',
     description: "stout / abv 5.0 % / ibu 30 / 0.33l",
     img: "../pics/MiLLe.png",
     popularity: Math.random() * 10,
