@@ -181,35 +181,59 @@ SORT_BY.forEach((element) => {
               </div>`
   );
 });
+const onclickSortBy = (div, property)=>{
+    div.addEventListener("click", () => {
+    SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
+      return a[property] - b[property];
+    });
+    categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+  });
+}
+
 // ======================= popularity =======================
 const popularityDiv = document.querySelector(".popularity");
-popularityDiv.addEventListener("click", () => {
-  SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
-    return a.popularity - b.popularity;
-  });
-  categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
-});
+onclickSortBy(popularityDiv, 'popularity');
+
+// popularityDiv.addEventListener("click", () => {
+//   SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
+//     return a.popularity - b.popularity;
+//   });
+//   categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+// });
 // ======================= average rating =======================
 const averageRatingDiv = document.querySelector(".average-rating");
-averageRatingDiv.addEventListener("click", () => {
-  SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
-    return a.averageRating - b.averageRating;
-  });
-  categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
-});
+onclickSortBy(averageRatingDiv, 'averageRating');
+
+// averageRatingDiv.addEventListener("click", () => {
+//   SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
+//     return a.averageRating - b.averageRating;
+//   });
+//   categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+// });
 // ======================= newness =======================
 const newnessDiv = document.querySelector(".newness");
-newnessDiv.addEventListener("click", () => {
-  SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
-    return a.added - b.added;
-  });
-  categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
-});
+onclickSortBy(newnessDiv, 'added');
+
+// newnessDiv.addEventListener("click", () => {
+//   SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
+//     return a.added - b.added;
+//   });
+//   categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+// });
 // ======================= low to high price =======================
 const lowToHighPriceDiv = document.querySelector(".low-to-high-price");
-lowToHighPriceDiv.addEventListener("click", () => {
+onclickSortBy(lowToHighPriceDiv, 'price');
+// lowToHighPriceDiv.addEventListener("click", () => {
+//   SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
+//     return a.price - b.price;
+//   });
+//   categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+// });
+// ======================= high to low price =======================
+const highToLowPriceDiv = document.querySelector(".high-to-low-price");
+highToLowPriceDiv.addEventListener("click", () => {
   SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
-    return a.price - b.price;
+    return b.price - a.price;
   });
   categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
 });
