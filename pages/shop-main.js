@@ -197,6 +197,14 @@ averageRatingDiv.addEventListener("click", () => {
   });
   categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
 });
+// ======================= newness =======================
+const newnessDiv = document.querySelector(".newness");
+newnessDiv.addEventListener("click", () => {
+  SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
+    return a.added - b.added;
+  });
+  categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+});
 // ======================= Filters - style =======================
 const filtersStyleSection = document.querySelector(".style");
 STYLE.forEach((element) => {

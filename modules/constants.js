@@ -235,6 +235,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/SuperNova.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2020-09-07 03:42:05"),
   },
   {
     name: "Lutka",
@@ -243,6 +244,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Lutka.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2021-02-19 06:05:38"),
   },
   {
     name: "Plavo",
@@ -251,6 +253,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Plavo.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2022-12-03 08:01:07"),
   },
   {
     name: "Porter",
@@ -259,6 +262,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Porter.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2018-02-18 12:12:48"),
   },
   {
     name: "Disko",
@@ -267,6 +271,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Disko.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2021-07-06 12:11:23"),
   },
   {
     name: "Konfuzije",
@@ -275,6 +280,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Konfuzije.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2022-08-17 01:57:37"),
   },
   {
     name: "Trag",
@@ -283,6 +289,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Trag.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2018-05-25 01:07:53"),
   },
   {
     name: "Pixie Dust",
@@ -291,6 +298,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Pixie-Dust.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2021-05-27 06:37:55"),
   },
   {
     name: "Bang",
@@ -299,6 +307,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Bang.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2018-10-20 10:56:23"),
   },
   {
     name: "Carica",
@@ -307,6 +316,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Carica.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2018-09-13 15:40:08"),
   },
   {
     name: "Hop Stew",
@@ -315,6 +325,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/Hop-Stew.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2021-01-02 17:42:38"),
   },
   {
     name: "MiLLe",
@@ -323,6 +334,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     img: "../pics/MiLLe.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
+    added: new Date("2019-10-03 10:42:00"),
   },
 ];
 export const SHOP_MAIN_BEER_PACKS_LIST = [
