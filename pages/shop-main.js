@@ -26,15 +26,27 @@ const categoryDisplay = (section, list) => {
     );
   }
   list.forEach((element) => {
-    section.insertAdjacentHTML(
-      "beforeend",
-      `
+    if (element.style && element.alcohol && element.color && element.volume) {
+      section.insertAdjacentHTML(
+        "beforeend",
+        `
             <div class="shop-item">
             <div class="shop-item-img"><img src="${element.img}" alt=""></div>
             <div class="shop-item-title"><h4>${element.name}</h4><h4>${element.price} ${element.currency}</h4></div>
             <p>${element.style} / abv ${element.alcohol}% / ibu ${element.color} / ${element.volume}l</p>
             </div>`
-    );
+      );
+    } else {
+      section.insertAdjacentHTML(
+        "beforeend",
+        `
+              <div class="shop-item">
+              <div class="shop-item-img"><img src="${element.img}" alt=""></div>
+              <div class="shop-item-title"><h4>${element.name}</h4><h4>${element.price} ${element.currency}</h4></div>
+              <p>${element.description}</p>
+              </div>`
+      );
+    }
   });
 };
 // ======================= Shop Main Beer Packs =======================
@@ -182,26 +194,26 @@ SORT_BY.forEach((element) => {
   );
 });
 // ======================= sort by function (ex high to low price) =======================
-const onclickSortBy = (div, property)=>{
-    div.addEventListener("click", () => {
+const onclickSortBy = (div, property) => {
+  div.addEventListener("click", () => {
     SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
       return a[property] - b[property];
     });
     categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
   });
-}
+};
 // ======================= popularity =======================
 const popularityDiv = document.querySelector(".popularity");
-onclickSortBy(popularityDiv, 'popularity');
+onclickSortBy(popularityDiv, "popularity");
 // ======================= average rating =======================
 const averageRatingDiv = document.querySelector(".average-rating");
-onclickSortBy(averageRatingDiv, 'averageRating');
+onclickSortBy(averageRatingDiv, "averageRating");
 // ======================= newness =======================
 const newnessDiv = document.querySelector(".newness");
-onclickSortBy(newnessDiv, 'added');
+onclickSortBy(newnessDiv, "added");
 // ======================= low to high price =======================
 const lowToHighPriceDiv = document.querySelector(".low-to-high-price");
-onclickSortBy(lowToHighPriceDiv, 'price');
+onclickSortBy(lowToHighPriceDiv, "price");
 // ======================= high to low price =======================
 const highToLowPriceDiv = document.querySelector(".high-to-low-price");
 highToLowPriceDiv.addEventListener("click", () => {
@@ -210,10 +222,10 @@ highToLowPriceDiv.addEventListener("click", () => {
   });
   categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
 });
-// ======================= Filters - style =======================
+// ======================= Filters - style - template =======================
 const filtersStyleSection = document.querySelector(".style");
 STYLE.forEach((element) => {
-  const id = element.replace(/\//g, "-");
+  const id = element.replace(/\//g, "-").toLowerCase();
   filtersStyleSection.insertAdjacentHTML(
     "beforeend",
     `
@@ -222,6 +234,32 @@ STYLE.forEach((element) => {
       <label for="${id}">${element}</label>
     </div>`
   );
+});
+// ======================= Filters - style - function =======================
+const styleInputsList = document.querySelectorAll(".style input");
+Array(...styleInputsList).forEach((input) => {
+  input.addEventListener("change", () => {
+    shopBeersSection.innerHTML = "";
+    let resultArr = [];
+    const checked = document.querySelectorAll(".style input:checked");
+    if (checked.length === 0) {
+      categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
+    } else {
+      Array(...checked).forEach((inputChecked) => {
+        const filteredArr = SHOP_MAIN_BEERS_LIST.filter((element) => {
+          const inputName = inputChecked.name.replace(/\-/g, "/");
+          const productName = element.style.toLowerCase();
+          return productName === inputName;
+        });
+        resultArr.push(...filteredArr);
+      });
+      if (resultArr.length === 0) {
+        shopBeersSection.innerHTML = "no such beer";
+      } else {
+        categoryDisplay(shopBeersSection, resultArr);
+      }
+    }
+  });
 });
 // ======================= Back to top button =======================
 backToTopButton();
