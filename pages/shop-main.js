@@ -196,6 +196,10 @@ SORT_BY.forEach((element) => {
 // ======================= sort by function (ex high to low price) =======================
 const onclickSortBy = (div, property) => {
   div.addEventListener("click", () => {
+    document
+      .querySelectorAll(".sort-by div")
+      .forEach((div) => (div.style.color = "#000000b2"));
+    div.style.color = "#000";
     SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
       return a[property] - b[property];
     });
@@ -217,6 +221,10 @@ onclickSortBy(lowToHighPriceDiv, "price");
 // ======================= high to low price =======================
 const highToLowPriceDiv = document.querySelector(".high-to-low-price");
 highToLowPriceDiv.addEventListener("click", () => {
+  document
+    .querySelectorAll(".sort-by div")
+    .forEach((div) => (div.style.color = "#000000b2"));
+  highToLowPriceDiv.style.color = "#000";
   SHOP_MAIN_BEERS_LIST.sort(function (a, b) {
     return b.price - a.price;
   });
@@ -235,30 +243,57 @@ STYLE.forEach((element) => {
     </div>`
   );
 });
-// ======================= Filters - style - function =======================
-const styleInputsList = document.querySelectorAll(".style input");
+// ======================= Filters - function =======================
+const styleInputsList = document.querySelectorAll(".beers-filter input");
 Array(...styleInputsList).forEach((input) => {
   input.addEventListener("change", () => {
     shopBeersSection.innerHTML = "";
-    let resultArr = [];
-    const checked = document.querySelectorAll(".style input:checked");
-    if (checked.length === 0) {
-      categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
-    } else {
-      Array(...checked).forEach((inputChecked) => {
-        const filteredArr = SHOP_MAIN_BEERS_LIST.filter((element) => {
-          const inputName = inputChecked.name.replace(/\-/g, "/");
-          const productName = element.style.toLowerCase();
-          return productName === inputName;
-        });
-        resultArr.push(...filteredArr);
-      });
-      if (resultArr.length === 0) {
-        shopBeersSection.innerHTML = "no such beer";
-      } else {
-        categoryDisplay(shopBeersSection, resultArr);
+    let filters = { style: [], alcohol: [], color: [] };
+    const checkedStyle = document.querySelectorAll(".style input:checked");
+    Array(...checkedStyle).forEach((inputChecked) => {
+      const inputName = inputChecked.name.replace(/\-/g, "/");
+      filters.style.push(inputName);
+    });
+    const checkedAlcohol = document.querySelectorAll(".alcohol input:checked");
+    Array(...checkedAlcohol).forEach((inputChecked) => {
+      filters.alcohol.push(inputChecked.name);
+    });
+    const checkedColor = document.querySelectorAll(".color input:checked");
+    Array(...checkedColor).forEach((inputChecked) => {
+      filters.color.push(inputChecked.name);
+    });
+    const filteredArr = SHOP_MAIN_BEERS_LIST.filter((element) => {
+      const productStyleName = element.style.toLowerCase();
+      if (filters.style.length === 0) {
+        filters.style = STYLE.map((element) => element.toLowerCase());
       }
+      if (filters.alcohol.length === 0) {
+        filters.alcohol = ["zero-five", "five-seven", "over-seven"];
+      }
+      if (filters.color.length === 0) {
+        filters.color = [
+          "to-fifteen-ebc",
+          "fifteen-fourty-ebc",
+          "over-fourty-ebc",
+        ];
+      }
+      return (
+        filters.style.includes(productStyleName) &&
+        filters.alcohol.includes(element.alcoholFilter) &&
+        filters.color.includes(element.colorFilter)
+      );
+    });
+    if (filteredArr.length === 0) {
+      shopBeersSection.innerHTML = "no such beer";
+    } else {
+      categoryDisplay(shopBeersSection, filteredArr);
     }
+  });
+});
+// ======================= Clear filters button =====================
+document.querySelector(".clear-button").addEventListener("click", () => {
+  Array(...styleInputsList).forEach((input) => {
+    input.checked = false;
   });
 });
 // ======================= Back to top button =======================

@@ -459,6 +459,9 @@ header {
   transform: rotate(180deg);
 }
 /*********************** Shop filters ***********************/
+.sort-by div {
+  cursor: pointer;
+}
 .filters-section {
   margin-top: 30px;
   border-top: solid 1px #000;
@@ -485,6 +488,7 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .filters-wrapper input + label:before {
   content: "";
