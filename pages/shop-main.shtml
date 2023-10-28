@@ -40,6 +40,12 @@
               MERCH
             </button>
           </div>
+          <button class="normal-button white-button show-filters disabled">
+            SHOW FILTERS
+<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8.70717 0.578755L13.7945 5.66675H0.666504V6.33342H13.7945L8.70717 11.4214L9.1785 11.8927L15.0705 6.00008L9.1785 0.107422L8.70717 0.578755Z" fill="black"/>
+  </svg>  
+          </button>
         </div>
         <div class="filters-section beers-filter">
           <div class="filters-wrapper">

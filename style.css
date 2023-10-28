@@ -467,6 +467,7 @@ header {
   border-top: solid 1px #000;
   border-bottom: solid 1px #000;
   color: #000000b2;
+  display: none;
 }
 .filters-wrapper {
   display: grid;
@@ -517,4 +518,9 @@ header {
 }
 .clear-button button:hover {
   color: #000000;
+}
+.show-filters{
+  color:#000;
+  border-color: #000;
+  display: none;
 }
