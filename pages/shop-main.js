@@ -250,7 +250,14 @@ document.querySelector(".clear-button").addEventListener("click", () => {
 });
 // ======================= Show filters button ======================
 showFiltersButton.addEventListener("click", () => {
-  filtersSection.style.display = "block";
+  switch (filtersSection.style.display) {
+    case "block":
+      filtersSection.style.display = "none";
+      break;
+    case "none":
+      filtersSection.style.display = "block";
+      break;
+  }
 });
 // ======================= Back to top button =======================
 backToTopButton();
