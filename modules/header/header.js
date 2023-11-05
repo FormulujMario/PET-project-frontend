@@ -10,6 +10,6 @@ export const logoImgDisplay = () => {
 const ulMenu = document.querySelector(".menu-list ul");
 export const menuListDisplay = () => {
   MENU_LIST.forEach((item) => {
-    ulMenu.insertAdjacentHTML("beforeend", `<li>${item}</li>`);
+    ulMenu.insertAdjacentHTML("beforeend", `<li><a href=${item.link}>${item.name}</a></li>`);
   });
 };

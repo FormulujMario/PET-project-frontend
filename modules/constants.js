@@ -1,5 +1,11 @@
 // ======================= Menu header =======================
-export const MENU_LIST = ["SHOP", "ABOUT", "ART", "NEWS", "CONTACT"];
+export const MENU_LIST = [
+  { name: "SHOP", link: "./pages/shop-main.shtml" },
+  { name: "ABOUT", link: "./index.shtml" },
+  { name: "ART", link: "./index.shtml" },
+  { name: "NEWS", link: "./index.shtml" },
+  { name: "CONTACT", link: "./index.shtml" },
+];
 // ======================= Index page =======================
 export const BESTSELLERS_LIST = [
   {
