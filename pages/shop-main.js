@@ -246,6 +246,7 @@ document.querySelector(".clear-button").addEventListener("click", () => {
   Array(...styleInputsList).forEach((input) => {
     input.checked = false;
   });
+  categoryDisplay(shopBeersSection, SHOP_MAIN_BEERS_LIST);
 });
 // ======================= Show filters button ======================
 showFiltersButton.addEventListener("click", () => {
