@@ -77,111 +77,55 @@ const beersShopCategory = document.querySelector(".beers-category");
 const merchShopCategory = document.querySelector(".merch-category");
 const pivoladaShopCategory = document.querySelector(".pivolada-category");
 
+const tabButtonsArr = [
+  allTabButton,
+  beerPackTabButton,
+  beersTabButton,
+  merchTabButton,
+  pivoladaTabButton,
+];
+const categoryArr = [
+  beerPackShopCategory,
+  beersShopCategory,
+  merchShopCategory,
+  pivoladaShopCategory,
+];
+
+tabButtonsArr.forEach((button) => {
+  button.addEventListener("click", () => {
+    tabButtonsArr.forEach((button) => {
+      button.classList.remove("active", "disabled");
+      button.classList.add("disabled");
+    });
+    button.classList.remove("disabled");
+    button.classList.add("active");
+    categoryArr.forEach((category) => {
+      category.classList.remove("visible", "hidden");
+      category.classList.add("hidden");
+    });
+  });
+});
 
 allTabButton.onclick = () => {
-  allTabButton.classList.remove("active", "disabled");
-  allTabButton.classList.add("active");
-  beerPackTabButton.classList.remove("active", "disabled");
-  beerPackTabButton.classList.add("disabled");
-  beersTabButton.classList.remove("active", "disabled");
-  beersTabButton.classList.add("disabled");
-  merchTabButton.classList.remove("active", "disabled");
-  merchTabButton.classList.add("disabled");
-  pivoladaTabButton.classList.remove("active", "disabled");
-  pivoladaTabButton.classList.add("disabled");
-
-  beerPackShopCategory.classList.remove("visible", "hidden");
-  beerPackShopCategory.classList.add("visible");
-  beersShopCategory.classList.remove("visible", "hidden");
-  beersShopCategory.classList.add("visible");
-  merchShopCategory.classList.remove("visible", "hidden");
-  merchShopCategory.classList.add("visible");
-  pivoladaShopCategory.classList.remove("visible", "hidden");
-  pivoladaShopCategory.classList.add("visible");
+  categoryArr.forEach((category) => {
+    category.classList.remove("hidden");
+    category.classList.add("visible");
+  });
 };
 beerPackTabButton.onclick = () => {
-  allTabButton.classList.remove("active", "disabled");
-  allTabButton.classList.add("disabled");
-  beerPackTabButton.classList.remove("active", "disabled");
-  beerPackTabButton.classList.add("active");
-  beersTabButton.classList.remove("active", "disabled");
-  beersTabButton.classList.add("disabled");
-  merchTabButton.classList.remove("active", "disabled");
-  merchTabButton.classList.add("disabled");
-  pivoladaTabButton.classList.remove("active", "disabled");
-  pivoladaTabButton.classList.add("disabled");
-
-  beerPackShopCategory.classList.remove("visible", "hidden");
+  beerPackShopCategory.classList.remove("hidden");
   beerPackShopCategory.classList.add("visible");
-  beersShopCategory.classList.remove("visible", "hidden");
-  beersShopCategory.classList.add("hidden");
-  merchShopCategory.classList.remove("visible", "hidden");
-  merchShopCategory.classList.add("hidden");
-  pivoladaShopCategory.classList.remove("visible", "hidden");
-  pivoladaShopCategory.classList.add("hidden");
 };
 beersTabButton.onclick = () => {
-  document.querySelector('.show-filters').style.display = 'block';
-  allTabButton.classList.remove("active", "disabled");
-  allTabButton.classList.add("disabled");
-  beerPackTabButton.classList.remove("active", "disabled");
-  beerPackTabButton.classList.add("disabled");
-  beersTabButton.classList.remove("active", "disabled");
-  beersTabButton.classList.add("active");
-  merchTabButton.classList.remove("active", "disabled");
-  merchTabButton.classList.add("disabled");
-  pivoladaTabButton.classList.remove("active", "disabled");
-  pivoladaTabButton.classList.add("disabled");
-
-  beerPackShopCategory.classList.remove("visible", "hidden");
-  beerPackShopCategory.classList.add("hidden");
-  beersShopCategory.classList.remove("visible", "hidden");
+  beersShopCategory.classList.remove("hidden");
   beersShopCategory.classList.add("visible");
-  merchShopCategory.classList.remove("visible", "hidden");
-  merchShopCategory.classList.add("hidden");
-  pivoladaShopCategory.classList.remove("visible", "hidden");
-  pivoladaShopCategory.classList.add("hidden");
 };
 merchTabButton.onclick = () => {
-  allTabButton.classList.remove("active", "disabled");
-  allTabButton.classList.add("disabled");
-  beerPackTabButton.classList.remove("active", "disabled");
-  beerPackTabButton.classList.add("disabled");
-  beersTabButton.classList.remove("active", "disabled");
-  beersTabButton.classList.add("disabled");
-  merchTabButton.classList.remove("active", "disabled");
-  merchTabButton.classList.add("active");
-  pivoladaTabButton.classList.remove("active", "disabled");
-  pivoladaTabButton.classList.add("disabled");
-
-  beerPackShopCategory.classList.remove("visible", "hidden");
-  beerPackShopCategory.classList.add("hidden");
-  beersShopCategory.classList.remove("visible", "hidden");
-  beersShopCategory.classList.add("hidden");
-  merchShopCategory.classList.remove("visible", "hidden");
+  merchShopCategory.classList.remove("hidden");
   merchShopCategory.classList.add("visible");
-  pivoladaShopCategory.classList.remove("visible", "hidden");
-  pivoladaShopCategory.classList.add("hidden");
 };
 pivoladaTabButton.onclick = () => {
-  allTabButton.classList.remove("active", "disabled");
-  allTabButton.classList.add("disabled");
-  beerPackTabButton.classList.remove("active", "disabled");
-  beerPackTabButton.classList.add("disabled");
-  beersTabButton.classList.remove("active", "disabled");
-  beersTabButton.classList.add("disabled");
-  merchTabButton.classList.remove("active", "disabled");
-  merchTabButton.classList.add("disabled");
-  pivoladaTabButton.classList.remove("active", "disabled");
-  pivoladaTabButton.classList.add("active");
-
-  beerPackShopCategory.classList.remove("visible", "hidden");
-  beerPackShopCategory.classList.add("hidden");
-  beersShopCategory.classList.remove("visible", "hidden");
-  beersShopCategory.classList.add("hidden");
-  merchShopCategory.classList.remove("visible", "hidden");
-  merchShopCategory.classList.add("hidden");
-  pivoladaShopCategory.classList.remove("visible", "hidden");
+  pivoladaShopCategory.classList.remove("hidden");
   pivoladaShopCategory.classList.add("visible");
 };
 // ======================= Filters - sort by =======================
@@ -300,7 +244,7 @@ document.querySelector(".clear-button").addEventListener("click", () => {
 });
 // ======================= Show filters button ======================
 document.querySelector(".show-filters").addEventListener("click", () => {
-  document.querySelector(".filters-section").style.display = 'block';
+  document.querySelector(".filters-section").style.display = "block";
 });
 // ======================= Back to top button =======================
 backToTopButton();
