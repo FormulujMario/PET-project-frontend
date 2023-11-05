@@ -90,6 +90,8 @@ const categoryArr = [
   merchShopCategory,
   pivoladaShopCategory,
 ];
+const showFiltersButton = document.querySelector(".show-filters");
+const filtersSection = document.querySelector(".filters-section");
 
 tabButtonsArr.forEach((button) => {
   button.addEventListener("click", () => {
@@ -103,6 +105,8 @@ tabButtonsArr.forEach((button) => {
       category.classList.remove("visible", "hidden");
       category.classList.add("hidden");
     });
+    showFiltersButton.style.display = "none";
+    filtersSection.style.display = "none";
   });
 });
 
@@ -119,6 +123,7 @@ beerPackTabButton.onclick = () => {
 beersTabButton.onclick = () => {
   beersShopCategory.classList.remove("hidden");
   beersShopCategory.classList.add("visible");
+  showFiltersButton.style.display = "block";
 };
 merchTabButton.onclick = () => {
   merchShopCategory.classList.remove("hidden");
@@ -243,8 +248,8 @@ document.querySelector(".clear-button").addEventListener("click", () => {
   });
 });
 // ======================= Show filters button ======================
-document.querySelector(".show-filters").addEventListener("click", () => {
-  document.querySelector(".filters-section").style.display = "block";
+showFiltersButton.addEventListener("click", () => {
+  filtersSection.style.display = "block";
 });
 // ======================= Back to top button =======================
 backToTopButton();
