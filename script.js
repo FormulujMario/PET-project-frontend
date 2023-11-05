@@ -4,7 +4,7 @@ import {
   KABINET_PRODUCTS_MERCH_LIST,
   KABINET_PRODUCTS_PIVOLADA_LIST,
   NEWS_LIST,
-} from "./modules/costants.js";
+} from "./modules/constants.js";
 import { logoImgDisplay, menuListDisplay } from "./modules/header/header.js";
 import { pageTitleDisplay } from "./modules/page-title.js";
 import {
