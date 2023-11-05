@@ -258,6 +258,7 @@ header {
 .kabinet-lounge-title-buttons {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 /*********************** Latest news Index page ***********************/
 .swiper-latest-news .swiper-wrapper {
