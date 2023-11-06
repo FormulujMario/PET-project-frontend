@@ -1,4 +1,4 @@
-import { SOC_NET_ICONS, FOOTER_MENU_LIST } from "../costants.js";
+import { SOC_NET_ICONS, FOOTER_MENU_LIST } from "../constants.js";
 // ======================= Back to top button =======================
 export const backToTopButton = () => {
   document.querySelector(".back-to-top button").onclick = () => {
