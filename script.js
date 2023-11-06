@@ -4,8 +4,8 @@ import {
   KABINET_PRODUCTS_MERCH_LIST,
   KABINET_PRODUCTS_PIVOLADA_LIST,
   NEWS_LIST,
-} from "./modules/costants.js";
-import { menuListDisplay } from "./modules/header/header.js";
+} from "./modules/constants.js";
+import { logoImgDisplay, menuListDisplay } from "./modules/header/header.js";
 import { pageTitleDisplay } from "./modules/page-title.js";
 import {
   backToTopButton,
@@ -13,6 +13,7 @@ import {
   socNetIconsDisplay,
 } from "./modules/footer/footer.js";
 // ======================= Menu header =======================
+logoImgDisplay();
 menuListDisplay();
 // ======================= Page title =======================
 pageTitleDisplay();

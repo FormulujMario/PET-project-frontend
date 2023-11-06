@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kabinet shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../modules/slider/swiper-bundle.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!--#include virtual="../modules/header/header.html" -->
+    <main>
+      <h1>KABINET SHOP</h1>
+      <section class="shop-section">
+        <div class="section-title">
+          <div class="tab-buttons">
+            <button class="normal-button white-button all-tab active">
+              ALL
+            </button>
+            <button class="normal-button white-button beer-packs-tab disabled">
+              BEER PACKS
+            </button>
+            <button class="normal-button white-button beers-tab disabled">
+              BEERS
+            </button>
+            <button class="normal-button white-button pivolada-tab disabled">
+              PIVOLADA
+            </button>
+            <button class="normal-button white-button merch-tab disabled">
+              MERCH
+            </button>
+          </div>
+          <button class="normal-button white-button show-filters disabled">
+            SHOW FILTERS
+<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8.70717 0.578755L13.7945 5.66675H0.666504V6.33342H13.7945L8.70717 11.4214L9.1785 11.8927L15.0705 6.00008L9.1785 0.107422L8.70717 0.578755Z" fill="black"/>
+  </svg>  
+          </button>
+        </div>
+        <div class="filters-section beers-filter">
+          <div class="filters-wrapper">
+            <div class="sort-by">
+              <p class="filter-title">Sort by</p>
+            </div>
+            <div class="style">
+              <p class="filter-title">Style</p>
+            </div>
+            <div class="alcohol">
+              <p class="filter-title">Alcohol</p>
+              <div>
+                <input type="checkbox" id="zero-five" name="zero-five" />
+                <label for="zero-five">0% - 5%</label>
+              </div>
+              <div>
+                <input type="checkbox" id="five-seven" name="five-seven" />
+                <label for="five-seven">5% - 7%</label>
+              </div>
+              <div>
+                <input type="checkbox" id="over-seven" name="over-seven" />
+                <label for="over-seven">Over 7%</label>
+              </div>
+            </div>
+            <div class="color">
+              <p class="filter-title">Color</p>
+              <div>
+                <input
+                  type="checkbox"
+                  id="to-fifteen-ebc"
+                  name="to-fifteen-ebc"
+                />
+                <label for="to-fifteen-ebc">To 15 EBC</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="fifteen-fourty-ebc"
+                  name="fifteen-fourty-ebc"
+                />
+                <label for="fifteen-fourty-ebc">15 - 40 EBC</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="over-fourty-ebc"
+                  name="over-fourty-ebc"
+                />
+                <label for="over-fourty-ebc">Over 40 EBC</label>
+              </div>
+            </div>
+          </div>
+          <div class="clear-button">
+            <button>CLEAR ALL FILTERS</button>
+          </div>
+        </div>
+        <div class="shop-category-with-title beer-packs-category">
+          <h2>BEER PACKS</h2>
+          <div class="shop-category beer-packs-section visible"></div>
+        </div>
+        <div class="shop-category-with-title beers-category">
+          <h2>BEERS</h2>
+          <div class="shop-category beers-section visible"></div>
+        </div>
+        <div class="shop-category-with-title pivolada-category">
+          <h2>PIVOLADA</h2>
+          <div class="shop-category pivolada-section visible"></div>
+        </div>
+        <div class="shop-category-with-title merch-category">
+          <h2>MERCH</h2>
+          <div class="shop-category merch-section visible"></div>
+        </div>
+      </section>
+      <section class="next-shop-category">
+        <img src="../pics/Beers.png" alt="" />
+        <div class="next-shop-category-title">
+          <button class="next-shop-category-button">
+            BEER
+            <svg
+              width="48"
+              height="40"
+              viewBox="0 0 48 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.0023 36.5282L28.007 39.533L47.54 19.9999L28.007 0.466917L25.0023 3.47167L39.4055 17.8749L0.124933 17.8749L0.124934 22.1249L39.4055 22.1249L25.0023 36.5282Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+    <!--#include virtual="../modules/footer/footer.html" -->
+    <script src="../modules/slider/swiper-bundle.min.js"></script>
+    <script type="module" src="../pages/shop-main.js"></script>
+  </body>
+</html>
